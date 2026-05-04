@@ -1,0 +1,7 @@
+{
+  "artifactType": "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary": "Plan to overhaul the GlobalMap component to display all provided real-world dealers constantly visible on a visual map layout with advanced zoom-on-hover mechanics.",
+  "updatedAt": "2026-04-27T19:36:43.181022500Z",
+  "version": "2",
+  "requestFeedback": true
+}
