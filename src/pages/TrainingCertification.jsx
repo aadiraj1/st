@@ -79,7 +79,7 @@ const TrainingCertification = () => {
                  <img 
                     src={prog.image} 
                     alt={prog.title} 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60 group-hover:opacity-100" 
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-100" 
                  />
                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                  <div className="absolute top-4 right-4 bg-accent text-black text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-full z-10 shadow-lg">{prog.level}</div>

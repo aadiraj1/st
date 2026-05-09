@@ -47,7 +47,7 @@ const Articles = () => {
                     <img 
                       src={article.imageUrl} 
                       alt={article.title} 
-                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 opacity-80 group-hover:opacity-100" 
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 opacity-100" 
                     />
                   ) : (
                     <div className={`w-full h-full ${article.image}`} />

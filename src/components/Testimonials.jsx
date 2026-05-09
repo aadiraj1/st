@@ -63,10 +63,9 @@ const Testimonials = () => {
         <div className="mt-20 max-w-4xl mx-auto aspect-video glass-effect relative flex items-center justify-center group overflow-hidden cursor-pointer border border-white/10">
           <img 
             src="" /* User to add video thumbnail src */
-            className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" 
+            className="absolute inset-0 w-full h-full object-cover opacity-100 group-hover:scale-105 transition-transform duration-700" 
             alt="Client Story"
           />
-          <div className="absolute inset-0 bg-primary/40 group-hover:bg-primary/20 transition-colors" />
           
           <div className="relative z-10 text-center">
             <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center text-black mb-4 mx-auto transform group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(0,174,239,0.5)]">

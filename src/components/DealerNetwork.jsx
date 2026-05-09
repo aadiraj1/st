@@ -107,9 +107,9 @@ const DealerNetwork = () => {
                   <img
                     src="/e5818c65-0f63-4627-a57b-217d4cff828a/wrkk1.png"
                     alt="Dealer Workshop"
-                    className="w-full h-full object-cover opacity-80 transition-all duration-700 hover:scale-105"
+                    className="w-full h-full object-cover opacity-100 transition-all duration-700 hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-80" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-40" />
                   <div className="absolute bottom-10 left-10 right-10">
                     <div className="text-4xl font-black text-white/10 uppercase tracking-tighter absolute -top-12 left-0 leading-none select-none">
                       Certified <br /> Workflow

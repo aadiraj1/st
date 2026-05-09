@@ -31,7 +31,7 @@ const FilmVariantDetail = () => {
           className="absolute inset-0 z-0"
         >
           {/* Video Background */}
-          <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0 opacity-40">
+          <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0 opacity-100">
             <source src="/e5818c65-0f63-4627-a57b-217d4cff828a/bck.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black z-10" />

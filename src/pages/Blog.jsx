@@ -38,7 +38,7 @@ const Blog = () => {
             className="relative bg-secondary/30 border border-white/10 rounded-3xl overflow-hidden flex flex-col lg:flex-row mb-16 group"
           >
             <div className={`w-full lg:w-1/2 h-80 lg:h-auto ${post.image} relative`}>
-               {post.imageUrl && <img src={post.imageUrl} className="w-full h-full object-cover opacity-50" alt={post.title} />}
+               {post.imageUrl && <img src={post.imageUrl} className="w-full h-full object-cover opacity-100" alt={post.title} />}
               <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
             </div>
             <div className="p-8 lg:p-12 flex-1 flex flex-col justify-center">
@@ -97,7 +97,7 @@ const Blog = () => {
               className="bg-secondary/20 border border-white/5 rounded-2xl overflow-hidden hover:border-accent/30 transition-all group flex flex-col"
             >
               <div className={`h-48 ${post.image} relative`}>
-                {post.imageUrl && <img src={post.imageUrl} className="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" alt={post.title} />}
+                {post.imageUrl && <img src={post.imageUrl} className="w-full h-full object-cover opacity-100 group-hover:scale-105 transition-transform duration-700" alt={post.title} />}
                 <div className="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-[10px] font-black uppercase tracking-widest px-3 py-1 text-accent">
                   {post.category}
                 </div>

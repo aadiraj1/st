@@ -80,7 +80,7 @@ const Bestsellers = () => {
               className="group"
             >
               <div className="relative aspect-square bg-primary overflow-hidden border border-white/5 cursor-pointer">
-                <div className="absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity">
+                <div className="absolute inset-0 opacity-100 transition-opacity">
                   <img src={product.image} alt={product.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 </div>
                 

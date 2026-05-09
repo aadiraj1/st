@@ -59,7 +59,7 @@ const ToolsKitsPage = () => {
       {/* Hero Section */}
       <section className="relative py-20 px-4 md:px-8 max-w-7xl mx-auto text-center overflow-hidden rounded-[40px] mt-8">
         {/* Video Background */}
-        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0 opacity-40">
+        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0 opacity-100">
           <source src="/e5818c65-0f63-4627-a57b-217d4cff828a/bck.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black z-10" />
@@ -185,7 +185,7 @@ const ToolsKitsPage = () => {
               className="group bg-secondary/30 border border-white/10 p-1 rounded-[30px] flex flex-col sm:flex-row items-center gap-8 hover:border-accent/40 transition-all duration-500 shadow-2xl overflow-hidden"
             >
               <div className="w-full sm:w-48 h-48 bg-primary shrink-0 overflow-hidden rounded-[26px]">
-                <img src={tool.image} alt={tool.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60 group-hover:opacity-100" />
+                <img src={tool.image} alt={tool.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-100" />
               </div>
               <div className="flex-1 p-6 sm:pl-0">
                 <div className="flex justify-between items-start mb-2">

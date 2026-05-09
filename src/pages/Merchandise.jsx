@@ -53,7 +53,7 @@ const MerchandisePage = () => {
       {/* Hero Section */}
       <section className="relative py-20 px-4 md:px-8 max-w-7xl mx-auto text-center overflow-hidden rounded-[40px] mt-8">
         {/* Video Background */}
-        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0 opacity-40">
+        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0 opacity-100">
           <source src="/e5818c65-0f63-4627-a57b-217d4cff828a/bck.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black z-10" />
@@ -86,7 +86,7 @@ const MerchandisePage = () => {
               className="group cursor-pointer"
             >
               <div className="relative h-[450px] bg-primary rounded-2xl overflow-hidden mb-6 border border-white/5 group-hover:border-accent/30 transition-all duration-500 shadow-2xl">
-                <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60 group-hover:opacity-100" />
+                <img src={item.image} alt={item.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-100" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent" />
 
                 {item.tag && (

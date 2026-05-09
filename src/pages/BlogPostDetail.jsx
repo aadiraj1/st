@@ -86,7 +86,7 @@ const BlogPostDetail = () => {
             <img 
               src={post.imageUrl} 
               alt={post.title} 
-              className="w-full h-full object-cover opacity-60"
+              className="w-full h-full object-cover opacity-100"
             />
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
@@ -187,7 +187,7 @@ const BlogPostDetail = () => {
           {blogPosts.filter(p => p.id !== post.id).slice(0, 3).map(rec => (
             <Link to={`/blog/${rec.id}`} key={rec.id} className="group">
               <div className={`aspect-video rounded-xl overflow-hidden mb-6 border border-white/5 relative ${rec.image}`}>
-                 {rec.imageUrl && <img src={rec.imageUrl} className="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" alt={rec.title} />}
+                 {rec.imageUrl && <img src={rec.imageUrl} className="w-full h-full object-cover opacity-100 group-hover:scale-105 transition-transform duration-700" alt={rec.title} />}
               </div>
               <h4 className="text-xl font-black uppercase tracking-tight group-hover:text-accent transition-colors">{rec.title}</h4>
             </Link>

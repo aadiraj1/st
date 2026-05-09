@@ -48,7 +48,7 @@ const Comparison = () => {
             <img 
               src="/e5818c65-0f63-4627-a57b-217d4cff828a/before_ppf_paint_1777321349880.png"
               alt="Before Protection"
-              className="w-full h-full object-cover grayscale-0 brightness-75"
+              className="w-full h-full object-cover grayscale-0"
             />
             <div className="absolute top-6 right-6 bg-red-600 text-white px-4 py-1.5 text-xs font-black uppercase tracking-widest z-20 border border-white/10 shadow-xl">
               Vulnerable Paint

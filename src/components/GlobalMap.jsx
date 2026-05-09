@@ -316,7 +316,7 @@ const GlobalMap = () => {
               <img
                 src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=2600"
                 alt="Global Map"
-                className="w-full h-full object-cover opacity-50 brightness-[0.35]"
+                className="w-full h-full object-cover opacity-100"
               />
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,var(--primary)_85%)]" />
             </div>

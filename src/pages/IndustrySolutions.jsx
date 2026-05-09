@@ -139,7 +139,7 @@ const IndustrySolutions = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen md:min-h-[90vh] flex items-center overflow-hidden py-32">
         <div className="absolute inset-0 z-0">
-          <img src={data.image} alt={data.title} className="w-full h-full object-cover opacity-40 scale-105" />
+          <img src={data.image} alt={data.title} className="w-full h-full object-cover opacity-100 scale-105" />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent" />
         </div>
 

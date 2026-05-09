@@ -75,11 +75,11 @@ const Industries = () => {
               >
                 {/* Background Image */}
                 <div className="absolute inset-0 bg-secondary transition-transform duration-1000 group-hover:scale-110">
-                  <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-all opacity-40 group-hover:opacity-70" />
+                  <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-all opacity-100" />
                 </div>
 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/20 to-transparent z-10 opacity-80 group-hover:opacity-60 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity" />
 
                 {/* Content */}
                 <div className="absolute inset-0 p-10 flex flex-col justify-end z-20">
