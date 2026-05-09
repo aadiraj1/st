@@ -61,16 +61,16 @@ const AboutUs = () => {
             <img
               src="/e5818c65-0f63-4627-a57b-217d4cff828a/eng.jpg" // 🔁 replace with your image path
               alt="Engineering"
-              className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-700"
+              className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700"
             />
 
             {/* Dark overlay */}
-            <div className="absolute inset-0 bg-black/60 z-[1]" />
+            <div className="absolute inset-0 bg-black/40 z-[1]" />
 
             {/* Shield Icon */}
             <Shield
               size={200}
-              className="absolute text-white/5 group-hover:text-accent/10 transition-colors duration-700 z-[2]"
+              className="absolute text-white/10 group-hover:text-accent/20 transition-colors duration-700 z-[2]"
             />
 
             {/* Gradient overlay */}

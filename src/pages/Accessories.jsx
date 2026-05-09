@@ -100,7 +100,7 @@ const accessories = [
     category: "Apparel",
     price: "$35.00",
     type: "Merch",
-    image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&q=80&w=800"
+    image: "/e5818c65-0f63-4627-a57b-217d4cff828a/ti.jpg"
   },
   {
     name: "Detailer's Hoodie",
@@ -114,7 +114,7 @@ const accessories = [
     category: "Apparel",
     price: "$28.00",
     type: "Merch",
-    image: "/e5818c65-0f63-4627-a57b-217d4cff828a/hod.jpg"
+    image: "/e5818c65-0f63-4627-a57b-217d4cff828a/hodtee.jpg"
   },
   {
     name: "Tech Jacket",
@@ -130,7 +130,7 @@ const accessories = [
     category: "Bundles",
     price: "$89.99",
     type: "Offer",
-    image: "https://images.unsplash.com/photo-1605515298946-d062f2e9da53?auto=format&fit=crop&q=80&w=800"
+    image: "/e5818c65-0f63-4627-a57b-217d4cff828a/kit.jpg"
   }
 ];
 
@@ -189,7 +189,7 @@ const Accessories = () => {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-20">
           {filteredAccessories.map((product, idx) => (
             <motion.div
               key={idx}
@@ -199,11 +199,11 @@ const Accessories = () => {
               className="group"
             >
               <div className="relative aspect-[3/4] bg-primary overflow-hidden border border-white/5 rounded-3xl">
-                <div className="absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity">
+                <div className="absolute inset-0 transition-opacity">
                   <img src={product.image} alt={product.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 </div>
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
+                <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-100 transition-opacity pointer-events-none" />
 
                 <div className="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                   <div className="flex justify-between items-end mb-4">
