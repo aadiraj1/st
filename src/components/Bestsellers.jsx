@@ -62,7 +62,7 @@ const Bestsellers = () => {
               whileInView={{ opacity: 1, y: 0 }}
               className="text-5xl md:text-7xl font-black uppercase tracking-tighter"
             >
-              elite Bestsellers
+              Starkx Bestsellers
             </motion.p>
           </div>
           <Link to="/accessories" className="flex items-center gap-4 text-[10px] font-black uppercase tracking-[0.4em] text-accent border-b border-accent pb-2 hover:gap-6 transition-all">

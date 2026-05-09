@@ -1,4 +1,4 @@
-# elite Auto Protection Landing Page
+# Starkx Auto Protection Landing Page
 
 This is a premium, high-conversion landing page built with React, Vite, Tailwind CSS, and Framer Motion.
 

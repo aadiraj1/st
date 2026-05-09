@@ -251,7 +251,7 @@ const DealerLogin = () => {
         </AnimatePresence>
 
         <div className="mt-10 flex items-center justify-center gap-2 text-[10px] font-black text-gray-600 uppercase tracking-[0.2em]">
-          <ShieldCheck size={14} className="text-accent" /> SSL SECURED • ELITE AUTO PROTECTION
+          <ShieldCheck size={14} className="text-accent" /> SSL SECURED • Starkx AUTO PROTECTION
         </div>
       </motion.div>
     </div>

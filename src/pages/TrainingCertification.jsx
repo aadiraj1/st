@@ -52,7 +52,7 @@ const TrainingCertification = () => {
           className="text-center"
         >
           <div className="inline-flex items-center gap-2 bg-accent/20 border border-accent/30 text-accent px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-[0.3em] mb-8">
-            <GraduationCap size={12} /> Elite Academy
+            <GraduationCap size={12} /> Starkx Academy
           </div>
           <h1 className="text-5xl md:text-8xl font-black uppercase tracking-tighter italic mb-8">
             Training & <span className="text-accent underline decoration-4 underline-offset-8">Certification</span>
@@ -111,8 +111,8 @@ const TrainingCertification = () => {
               <div className="absolute inset-0 border-4 border-accent border-dashed rounded-full animate-spin-slow opacity-20" />
            </div>
            <div className="flex-1 text-center lg:text-left">
-              <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter italic mb-6">The Elite Certified Badge</h2>
-              <p className="text-gray-400 text-lg leading-relaxed mb-8 font-medium">Being Elite Certified isn't just about a certificate; it's about joining an exclusive community. Our badge is recognized by luxury car owners and collectors as a mark of absolute quality and trust.</p>
+              <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter italic mb-6">The Starkx Certified Badge</h2>
+              <p className="text-gray-400 text-lg leading-relaxed mb-8 font-medium">Being Starkx Certified isn't just about a certificate; it's about joining an exclusive community. Our badge is recognized by luxury car owners and collectors as a mark of absolute quality and trust.</p>
               <div className="flex flex-wrap justify-center lg:justify-start gap-4">
                  {['Global Recognition', 'Priority Referrals', 'Advanced Technical Support'].map(item => (
                    <span key={item} className="bg-white/5 border border-white/10 px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest text-gray-400">{item}</span>
@@ -184,7 +184,7 @@ const TrainingCertification = () => {
               </div>
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter italic mb-6 leading-none">Registration <br/>Successful</h2>
               <p className="text-gray-400 font-bold uppercase text-xs tracking-widest leading-relaxed mb-10">
-                Thank you for choosing Elite Academy. Our team will contact you shortly to finalize your enrollment and provide next steps for certification.
+                Thank you for choosing Starkx Academy. Our team will contact you shortly to finalize your enrollment and provide next steps for certification.
               </p>
               <button 
                 onClick={() => setIsSubmitted(false)}

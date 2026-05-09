@@ -29,7 +29,7 @@ const faqCategories = [
     icon: <Book size={20} />,
     questions: [
       { q: "What does the 10-year warranty cover?", a: "Our comprehensive warranty covers yellowing, staining, cracking, blistering, and delamination. It is backed by our global network of certified dealers." },
-      { q: "Is the warranty transferable?", a: "Yes, the Elite Auto warranty is transferable to subsequent owners, provided the original installation was performed by a certified dealer and the vehicle care requirements have been met." }
+      { q: "Is the warranty transferable?", a: "Yes, the Starkx Auto warranty is transferable to subsequent owners, provided the original installation was performed by a certified dealer and the vehicle care requirements have been met." }
     ]
   }
 ];
@@ -96,8 +96,8 @@ const HelpCenter = () => {
             <h4 className="text-[10px] font-black text-gray-600 uppercase tracking-widest mb-6">Need more help?</h4>
             <div className="space-y-4">
               <button onClick={() => openSupportModal('Live Support Request')} className="flex items-center gap-3 text-xs font-bold text-gray-400 hover:text-accent transition-colors"><MessageSquare size={16} /> Live Chat</button>
-              <a href="mailto:support@eliteauto.com" className="flex items-center gap-3 text-xs font-bold text-gray-400 hover:text-accent transition-colors"><Mail size={16} /> support@eliteauto.com</a>
-              <a href="tel:+1800ELITE" className="flex items-center gap-3 text-xs font-bold text-gray-400 hover:text-accent transition-colors"><Phone size={16} /> 1-800-ELITE</a>
+              <a href="mailto:support@Starkxauto.com" className="flex items-center gap-3 text-xs font-bold text-gray-400 hover:text-accent transition-colors"><Mail size={16} /> support@Starkxauto.com</a>
+              <a href="tel:+1800Starkx" className="flex items-center gap-3 text-xs font-bold text-gray-400 hover:text-accent transition-colors"><Phone size={16} /> 1-800-Starkx</a>
             </div>
           </div>
         </div>

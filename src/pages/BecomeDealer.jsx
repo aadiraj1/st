@@ -39,7 +39,7 @@ const BecomeDealer = () => {
             Become A <span className="text-accent underline decoration-4 underline-offset-8">Partner</span>
           </h1>
           <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed font-medium">
-            Join the world's most elite network of protective film installers. Elevate your business with industry-leading materials, precision software, and global branding.
+            Join the world's most Starkx network of protective film installers. Elevate your business with industry-leading materials, precision software, and global branding.
           </p>
         </motion.div>
       </section>
@@ -58,7 +58,7 @@ const BecomeDealer = () => {
                   <label className="block text-[10px] font-black uppercase tracking-widest text-gray-500 ml-1">Business Name</label>
                   <div className="relative">
                     <Building2 className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-600" size={18} />
-                    <input required className="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 outline-none focus:border-accent text-sm" placeholder="Elite Customs LLC" value={formData.businessName} onChange={(e) => setFormData({...formData, businessName: e.target.value})} />
+                    <input required className="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 outline-none focus:border-accent text-sm" placeholder="Starkx Customs LLC" value={formData.businessName} onChange={(e) => setFormData({...formData, businessName: e.target.value})} />
                   </div>
                 </div>
                 <div className="space-y-2">
@@ -153,7 +153,7 @@ const BecomeDealer = () => {
               </div>
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter italic mb-6 leading-none">Application <br/>Received</h2>
               <p className="text-gray-400 font-bold uppercase text-xs tracking-widest leading-relaxed mb-10">
-                Thank you for your interest in Elite Auto. Our dealer relations team will review your credentials and contact you to let you know if you are eligible to join the network.
+                Thank you for your interest in Starkx Auto. Our dealer relations team will review your credentials and contact you to let you know if you are eligible to join the network.
               </p>
               <button 
                 onClick={() => navigate('/')}

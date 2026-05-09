@@ -9,7 +9,7 @@ const upcomingEvents = [
     date: "June 12-15, 2026",
     location: "Las Vegas, NV",
     type: "Industry Conference",
-    description: "The world's largest gathering of protective film professionals. Elite Auto will be unveiling our next-generation 'Titan' series film with active molecular memory.",
+    description: "The world's largest gathering of protective film professionals. Starkx Auto will be unveiling our next-generation 'Titan' series film with active molecular memory.",
     capacity: "5,000+ Attendees",
     featured: true
   },
@@ -28,7 +28,7 @@ const upcomingEvents = [
     date: "July 05, 2026",
     location: "Chiba, Japan",
     type: "Consumer Show",
-    description: "Join us at the Makuhari Messe as we showcase 10 iconic JDM legends protected by Elite PPF. Exclusive merchandise drops available at the booth.",
+    description: "Join us at the Makuhari Messe as we showcase 10 iconic JDM legends protected by Starkx PPF. Exclusive merchandise drops available at the booth.",
     capacity: "Public Event"
   }
 ];
@@ -74,7 +74,7 @@ const Events = () => {
             <Zap size={12} /> Global Hub
           </div>
           <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter italic mb-8">
-            The Elite <span className="text-accent underline decoration-4 underline-offset-8">Circuit</span>
+            The Starkx <span className="text-accent underline decoration-4 underline-offset-8">Circuit</span>
           </h1>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
             From industry expos in Vegas to masterclass workshops in Dubai, witness the future of surface engineering across the globe.
@@ -124,7 +124,7 @@ const Events = () => {
               <div>
                 <h4 className="text-xl font-black uppercase tracking-tight mb-6">Who's Attending?</h4>
                 <div className="space-y-4">
-                  {['OEM Manufacturers', 'Elite Detailing Studios', 'Global Distributors', 'Chemical Engineers'].map(item => (
+                  {['OEM Manufacturers', 'Starkx Detailing Studios', 'Global Distributors', 'Chemical Engineers'].map(item => (
                     <div key={item} className="flex items-center gap-3 text-sm font-bold text-gray-400">
                       <Star size={14} className="text-accent" /> {item}
                     </div>

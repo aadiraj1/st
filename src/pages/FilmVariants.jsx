@@ -5,11 +5,11 @@ import FilmVariantsComponent from '../components/FilmVariants';
 import { filmVariants } from '../data/filmVariants';
 
 const specData = [
-  { feature: "Thickness", nova: "6.5 mil", plus: "7.5 mil", elite: "8.5 mil", master: "9.5 mil" },
-  { feature: "Self-Healing", nova: "Heat Activated", plus: "Heat Activated", elite: "Instant/Room Temp", master: "Instant/Room Temp" },
-  { feature: "Hydrophobicity", nova: "High", plus: "High", elite: "Extreme", master: "Extreme" },
-  { feature: "UV Protection", nova: "Standard", plus: "Advanced", elite: "Maximized", master: "Maximized" },
-  { feature: "Warranty", nova: "3 Years", plus: "4 Years", elite: "7 Years", master: "10 Years" },
+  { feature: "Thickness", nova: "6.5 mil", plus: "7.5 mil", Starkx: "8.5 mil", master: "9.5 mil" },
+  { feature: "Self-Healing", nova: "Heat Activated", plus: "Heat Activated", Starkx: "Instant/Room Temp", master: "Instant/Room Temp" },
+  { feature: "Hydrophobicity", nova: "High", plus: "High", Starkx: "Extreme", master: "Extreme" },
+  { feature: "UV Protection", nova: "Standard", plus: "Advanced", Starkx: "Maximized", master: "Maximized" },
+  { feature: "Warranty", nova: "3 Years", plus: "4 Years", Starkx: "7 Years", master: "10 Years" },
 ];
 
 const FilmVariantsPage = () => {
@@ -34,7 +34,7 @@ const FilmVariantsPage = () => {
           className="relative z-20"
         >
           <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter italic mb-6">
-            Elite <span className="text-accent underline decoration-4 underline-offset-8">Variants</span>
+            Starkx <span className="text-accent underline decoration-4 underline-offset-8">Variants</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 font-medium">
             Engineered for perfection. Discover the technical specifications and unique benefits of our industry-leading paint protection films.
@@ -123,7 +123,7 @@ const FilmVariantsPage = () => {
                 <th className="py-6 px-8 border-b border-white/20 bg-white/5 font-black uppercase tracking-widest text-[10px] text-gray-500">Feature</th>
                 <th className="py-6 px-8 border-b border-white/20 bg-white/5 font-black uppercase tracking-widest text-[10px] text-gray-300">Nova</th>
                 <th className="py-6 px-8 border-b border-white/20 bg-white/5 font-black uppercase tracking-widest text-[10px] text-blue-400">Plus</th>
-                <th className="py-6 px-8 border-b border-white/20 bg-white/5 font-black uppercase tracking-widest text-[10px] text-accent">Elite</th>
+                <th className="py-6 px-8 border-b border-white/20 bg-white/5 font-black uppercase tracking-widest text-[10px] text-accent">Starkx</th>
                 <th className="py-6 px-8 border-b border-white/20 bg-white/5 font-black uppercase tracking-widest text-[10px] text-purple-400">Master</th>
               </tr>
             </thead>
@@ -140,7 +140,7 @@ const FilmVariantsPage = () => {
                   <td className="py-6 px-8 border-b border-white/10 font-black uppercase tracking-tight text-xs text-gray-400 group-hover:text-white">{row.feature}</td>
                   <td className="py-6 px-8 border-b border-white/10 text-sm font-bold text-gray-500">{row.nova}</td>
                   <td className="py-6 px-8 border-b border-white/10 text-sm font-bold text-gray-500">{row.plus}</td>
-                  <td className="py-6 px-8 border-b border-white/10 text-sm font-bold text-gray-500">{row.elite}</td>
+                  <td className="py-6 px-8 border-b border-white/10 text-sm font-bold text-gray-500">{row.Starkx}</td>
                   <td className="py-6 px-8 border-b border-white/10 text-sm font-bold text-gray-500">{row.master}</td>
                 </motion.tr>
               ))}

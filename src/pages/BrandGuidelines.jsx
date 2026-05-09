@@ -19,7 +19,7 @@ const BrandGuidelines = () => {
             Brand <span className="text-accent underline decoration-4 underline-offset-8">Guidelines</span>
           </h1>
           <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed font-medium">
-            Welcome to the Elite Auto design system. We maintain a rigorous visual identity to ensure our brand reflects the precision and performance of our engineering. Use these resources to represent Elite Auto accurately across all media.
+            Welcome to the Starkx Auto design system. We maintain a rigorous visual identity to ensure our brand reflects the precision and performance of our engineering. Use these resources to represent Starkx Auto accurately across all media.
           </p>
         </motion.div>
       </section>
@@ -33,7 +33,7 @@ const BrandGuidelines = () => {
           <div className="bg-secondary/20 border border-white/5 rounded-3xl p-12 flex flex-col items-center justify-center min-h-[400px] relative group">
             <div className="flex items-center gap-4 mb-12">
                <div className="w-16 h-16 bg-accent rounded flex items-center justify-center font-black text-black text-3xl skew-x-[-15deg]">E</div>
-               <span className="text-5xl font-black tracking-tighter uppercase italic text-white">elite <span className="text-accent underline decoration-4 underline-offset-4">Auto</span></span>
+               <span className="text-5xl font-black tracking-tighter uppercase italic text-white">Starkx <span className="text-accent underline decoration-4 underline-offset-4">Auto</span></span>
             </div>
             <button className="absolute bottom-8 right-8 bg-white/5 p-4 rounded-full text-gray-500 hover:bg-accent hover:text-black transition-all group-hover:scale-110">
               <Download size={20} />
@@ -43,7 +43,7 @@ const BrandGuidelines = () => {
           <div className="bg-white border border-black/5 rounded-3xl p-12 flex flex-col items-center justify-center min-h-[400px] relative group">
             <div className="flex items-center gap-4 mb-12">
                <div className="w-16 h-16 bg-accent rounded flex items-center justify-center font-black text-black text-3xl skew-x-[-15deg]">E</div>
-               <span className="text-5xl font-black tracking-tighter uppercase italic text-black">elite <span className="text-accent underline decoration-4 underline-offset-4">Auto</span></span>
+               <span className="text-5xl font-black tracking-tighter uppercase italic text-black">Starkx <span className="text-accent underline decoration-4 underline-offset-4">Auto</span></span>
             </div>
             <button className="absolute bottom-8 right-8 bg-black/5 p-4 rounded-full text-gray-400 hover:bg-accent hover:text-black transition-all group-hover:scale-110">
               <Download size={20} />
@@ -60,7 +60,7 @@ const BrandGuidelines = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {[
-            { name: "Elite Cyan", hex: "#00AEEF", usage: "Accents, CTA, Links", class: "bg-accent text-black" },
+            { name: "Starkx Cyan", hex: "#00AEEF", usage: "Accents, CTA, Links", class: "bg-accent text-black" },
             { name: "Obsidian", hex: "#0A0A0A", usage: "Primary Background", class: "bg-black text-white border border-white/10" },
             { name: "Gunmetal", hex: "#1A1A1A", usage: "Secondary Background", class: "bg-secondary text-white" },
             { name: "Pure White", hex: "#FFFFFF", usage: "Primary Typography", class: "bg-white text-black" }

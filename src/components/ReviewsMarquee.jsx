@@ -84,7 +84,7 @@ const ReviewsMarquee = () => {
         >
           <h2 className="text-[10px] font-black text-accent uppercase tracking-[0.5em] mb-3">Global Validation</h2>
           <p className="text-3xl md:text-5xl font-black uppercase tracking-tighter italic">
-            Trusted by the <span className="text-accent underline decoration-4 underline-offset-6">elite</span>
+            Trusted by the <span className="text-accent underline decoration-4 underline-offset-6">Starkx</span>
           </p>
         </motion.div>
       </div>

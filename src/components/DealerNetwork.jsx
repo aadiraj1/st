@@ -22,7 +22,7 @@ const benefits = [
   {
     icon: <BookOpen size={24} />,
     title: 'Market Access',
-    desc: 'Leverage the elite Auto brand power and our global marketing engine to drive leads.'
+    desc: 'Leverage the Starkx Auto brand power and our global marketing engine to drive leads.'
   }
 ];
 
@@ -62,10 +62,10 @@ const DealerNetwork = () => {
                   className="text-4xl sm:text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 leading-[0.9]"
                 >
                   Become an <br />
-                  elite Dealer
+                  Starkx Dealer
                 </motion.p>
                 <p className="text-gray-400 text-base md:text-lg mb-12 font-medium leading-relaxed max-w-xl">
-                  We are looking for elite installers and business owners to join our global network. Team up with the world's leading PPF manufacturer and elevate your shop's potential.
+                  We are looking for Starkx installers and business owners to join our global network. Team up with the world's leading PPF manufacturer and elevate your shop's potential.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10">

@@ -56,7 +56,7 @@ const ShopMain = () => {
           className="text-center relative z-20"
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-glow">
-            Elite <span className="text-accent text-glow-accent">Shop</span>
+            Starkx <span className="text-accent text-glow-accent">Shop</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10">
             Discover our curated collection of premium paint protection films, professional detailing supplies, and exclusive merchandise.

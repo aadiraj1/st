@@ -25,7 +25,7 @@ const Careers = () => {
           </div>
 
           <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter italic mb-8">
-            Work At <span className="text-accent underline decoration-4 underline-offset-8">Elite</span>
+            Work At <span className="text-accent underline decoration-4 underline-offset-8">Starkx</span>
           </h1>
 
           <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed font-medium">
@@ -42,7 +42,7 @@ const Careers = () => {
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2069')] opacity-20 grayscale group-hover:grayscale-0 transition-all duration-1000" />
             <div className="relative z-10 text-center">
               <p className="text-[10px] font-black uppercase tracking-[0.5em] text-accent mb-4 italic">
-                Life at Elite
+                Life at Starkx
               </p>
               <p className="text-3xl font-black uppercase tracking-tighter">
                 Innovation <br />Without Borders
@@ -143,7 +143,7 @@ const Careers = () => {
           </p>
 
           <a
-            href="mailto:talent@eliteauto.com"
+            href="mailto:talent@Starkxauto.com"
             className="text-[10px] font-black text-white uppercase tracking-widest underline underline-offset-4 hover:text-accent transition-colors"
           >
             talent@starkx.com

@@ -23,7 +23,7 @@ const Blog = () => {
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter italic mb-6">
-            Elite <span className="text-accent underline decoration-4 underline-offset-8">Insights</span>
+            Starkx <span className="text-accent underline decoration-4 underline-offset-8">Insights</span>
           </h1>
           <p className="text-gray-400 max-w-2xl mx-auto font-bold uppercase text-xs tracking-[0.3em]">
             Deep Dives, Technical Analysis, and Global Updates

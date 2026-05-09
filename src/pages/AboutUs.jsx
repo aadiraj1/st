@@ -19,7 +19,7 @@ const AboutUs = () => {
             Our <span className="text-accent underline decoration-4 underline-offset-8">Heritage</span>
           </h1>
           <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed font-medium">
-            From a boutique lab in Silicon Valley to a global powerhouse in surface engineering. Elite Auto is built on the obsession of absolute perfection in protection.
+            From a boutique lab in Silicon Valley to a global powerhouse in surface engineering. Starkx Auto is built on the obsession of absolute perfection in protection.
           </p>
         </motion.div>
       </section>
@@ -31,7 +31,7 @@ const AboutUs = () => {
             A Decade of <br />Engineering Mastery
           </h2>
           <p className="text-gray-400 leading-relaxed text-lg">
-            In 2012, Elite Auto was founded with a singular mission: to eliminate the compromise between clarity and protection. At the time, paint protection films were prone to yellowing, orange-peel textures, and premature failure.
+            In 2012, Starkx Auto was founded with a singular mission: to eliminate the compromise between clarity and protection. At the time, paint protection films were prone to yellowing, orange-peel textures, and premature failure.
           </p>
           <p className="text-gray-400 leading-relaxed text-lg">
             Our founders, a team of material scientists and detailing purists, spent three years in R&D before launching our first 'Titan' series. Today, our films utilize active molecular memory and advanced TPU polymers that set the industry benchmark for impact resistance and optical purity.
@@ -113,7 +113,7 @@ const AboutUs = () => {
               <Globe className="text-accent" /> Our Vision
             </h3>
             <p className="text-gray-400 text-lg leading-relaxed font-medium relative z-10">
-              To be the global authority in high-performance coatings, where every asset worth preserving is protected by Elite engineering.
+              To be the global authority in high-performance coatings, where every asset worth preserving is protected by Starkx engineering.
             </p>
           </div>
         </div>

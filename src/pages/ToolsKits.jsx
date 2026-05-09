@@ -74,7 +74,7 @@ const ToolsKitsPage = () => {
             Tools & <span className="text-accent text-glow-accent italic">Kits</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 font-bold uppercase tracking-widest text-xs">
-            Professional installation requires professional gear. Discover the tools trusted by elite installers worldwide.
+            Professional installation requires professional gear. Discover the tools trusted by Starkx installers worldwide.
           </p>
         </motion.div>
       </section>

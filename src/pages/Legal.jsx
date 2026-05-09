@@ -9,7 +9,7 @@ const legalContent = {
     sections: [
       {
         h: "1. Scope of Agreement",
-        p: "This agreement governs the use of Elite Auto's global digital platforms, including the primary website, dealer portal, and Design Access Program (DAP)."
+        p: "This agreement governs the use of Starkx Auto's global digital platforms, including the primary website, dealer portal, and Design Access Program (DAP)."
       },
       {
         h: "2. Commercial Use & Licensing",
@@ -45,7 +45,7 @@ const legalContent = {
     sections: [
       {
         h: "1. Patent Protection",
-        p: "Elite Auto technologies are protected under global patent filings covering polymer and adhesive systems."
+        p: "Starkx Auto technologies are protected under global patent filings covering polymer and adhesive systems."
       },
       {
         h: "2. Pattern Security",
@@ -165,7 +165,7 @@ const Legal = () => {
       {/* FOOTER COMPLIANCE */}
       <section className="mt-32 px-4 md:px-8 max-w-5xl mx-auto text-center opacity-30">
         <p className="text-[9px] font-black text-gray-500 uppercase tracking-[0.3em] leading-loose">
-          ELITE AUTO LEGAL SYSTEM IS MONITORED AND ENCRYPTED. ALL ACCESS IS LOGGED FOR COMPLIANCE AUDITING PURPOSES. © 2026 ELITE AUTO MANUFACTURING CORP.
+          Starkx AUTO LEGAL SYSTEM IS MONITORED AND ENCRYPTED. ALL ACCESS IS LOGGED FOR COMPLIANCE AUDITING PURPOSES. © 2026 Starkx AUTO MANUFACTURING CORP.
         </p>
       </section>
 

@@ -96,7 +96,7 @@ const accessories = [
 
   // Merchandise
   {
-    name: "Elite Origin Tee",
+    name: "Starkx Origin Tee",
     category: "Apparel",
     price: "$35.00",
     type: "Merch",
@@ -169,7 +169,7 @@ const Accessories = () => {
               animate={{ opacity: 1, y: 0 }}
               className="text-6xl md:text-8xl font-black uppercase tracking-tighter italic leading-none mb-6"
             >
-              Elite <span className="text-accent underline decoration-4 underline-offset-8">Accessories</span>
+              Starkx <span className="text-accent underline decoration-4 underline-offset-8">Accessories</span>
             </motion.h1>
             <p className="text-gray-500 text-lg font-bold uppercase tracking-tight">
               Precision tools and high-performance chemistry for professional results.

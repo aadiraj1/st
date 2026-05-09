@@ -12,11 +12,11 @@ const CHAT_DATA = {
     ]
   },
   compare: {
-    text: "Here’s a quick overview:\n\n**Nova** – 6.5 mil | 3 yrs\nBasic daily protection\n\n**Plus** – 7.5 mil | 4 yrs\nBetter durability & clarity\n\n**Elite** – 8.5 mil | 7 yrs\nPremium balance of strength\n\n**Master** – 9.5 mil | 10 yrs\nMaximum protection",
+    text: "Here’s a quick overview:\n\n**Nova** – 6.5 mil | 3 yrs\nBasic daily protection\n\n**Plus** – 7.5 mil | 4 yrs\nBetter durability & clarity\n\n**Starkx** – 8.5 mil | 7 yrs\nPremium balance of strength\n\n**Master** – 9.5 mil | 10 yrs\nMaximum protection",
     options: [
       { label: "View Nova", next: "nova" },
       { label: "View Plus", next: "plus" },
-      { label: "View Elite", next: "elite" },
+      { label: "View Starkx", next: "Starkx" },
       { label: "View Master", next: "master" },
       { label: "🏠 Main Menu", next: "menu" }
     ]
@@ -29,8 +29,8 @@ const CHAT_DATA = {
       { label: "🏠 Main Menu", next: "menu" },
     ]
   },
-  elite: {
-    text: "💎 **Elite – 8.5 mil | 7 Years**\nPerfect balance of performance & finish.\n\n✔ Instant Self-Healing\n✔ Ceramic Infused Layer\n✔ Extreme Impact Resistance\n✔ Stain Resistance",
+  Starkx: {
+    text: "💎 **Starkx – 8.5 mil | 7 Years**\nPerfect balance of performance & finish.\n\n✔ Instant Self-Healing\n✔ Ceramic Infused Layer\n✔ Extreme Impact Resistance\n✔ Stain Resistance",
     options: [
       { label: "Compare All", next: "compare" },
       { label: "See Other Options", next: "compare" },
@@ -71,9 +71,9 @@ const CHAT_DATA = {
     ]
   },
   rec_luxury: {
-    text: "💎 Choose **Elite**\nHigh clarity with ceramic layer.",
+    text: "💎 Choose **Starkx**\nHigh clarity with ceramic layer.",
     options: [
-      { label: "View Details", next: "elite" },
+      { label: "View Details", next: "Starkx" },
       { label: "Compare All", next: "compare" },
       { label: "Back", next: "recommend" },
     ]
@@ -221,7 +221,7 @@ const Chatbot = () => {
                   <Bot size={18} className="text-accent" />
                 </div>
                 <div>
-                  <h3 className="text-white font-semibold text-sm">Star PPF Assistant</h3>
+                  <h3 className="text-white font-semibold text-sm">Micheal PPF Assistant</h3>
                   <p className="text-zinc-400 text-xs flex items-center gap-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
                     Online

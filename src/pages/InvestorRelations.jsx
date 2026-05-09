@@ -26,7 +26,7 @@ const InvestorRelations = () => {
             Investor <span className="text-accent underline decoration-4 underline-offset-8">Relations</span>
           </h1>
           <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed font-medium">
-            Elite Auto Protection is committed to delivering long-term value to our shareholders through relentless innovation and global market expansion.
+            Starkx Auto Protection is committed to delivering long-term value to our shareholders through relentless innovation and global market expansion.
           </p>
         </motion.div>
       </section>
@@ -94,9 +94,9 @@ const InvestorRelations = () => {
          </div>
          <div className="space-y-6">
             {[
-              { date: "May 02, 2026", title: "Elite Auto Protection Announces Q1 2026 Earnings with 45% YOY Growth.", source: "Press Release" },
+              { date: "May 02, 2026", title: "Starkx Auto Protection Announces Q1 2026 Earnings with 45% YOY Growth.", source: "Press Release" },
               { date: "April 15, 2026", title: "New Strategic Partnership with Global Logistics Leader for Middle East Expansion.", source: "Corporate Update" },
-              { date: "March 28, 2026", title: "Elite Auto Protection to Participate in Upcoming Investor Conference in NYC.", source: "Events" }
+              { date: "March 28, 2026", title: "Starkx Auto Protection to Participate in Upcoming Investor Conference in NYC.", source: "Events" }
             ].map((news, idx) => (
               <div key={idx} className="bg-secondary/10 border border-white/5 p-8 rounded-3xl flex flex-col md:flex-row justify-between items-center hover:bg-secondary/30 transition-all cursor-pointer">
                  <div className="flex flex-col gap-2 mb-6 md:mb-0">
@@ -115,7 +115,7 @@ const InvestorRelations = () => {
             <BarChart size={40} className="mx-auto mb-6 text-accent" />
             <h4 className="text-2xl font-black uppercase tracking-tight mb-4 italic">Investor Contact</h4>
             <p className="text-gray-400 mb-8 font-medium">For inquiries related to shareholder services or financial reporting, please contact our IR team.</p>
-            <a href="mailto:investors@eliteauto.com" className="text-[10px] font-black text-white uppercase tracking-widest underline underline-offset-4 hover:text-accent transition-colors">investors@eliteauto.com</a>
+            <a href="mailto:investors@Starkxauto.com" className="text-[10px] font-black text-white uppercase tracking-widest underline underline-offset-4 hover:text-accent transition-colors">investors@Starkxauto.com</a>
          </div>
       </section>
     </div>

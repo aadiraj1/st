@@ -5,7 +5,7 @@ import { useCart } from '../context/CartContext';
 
 const merch = [
   {
-    name: "Elite Origin Tee",
+    name: "Starkx Origin Tee",
     price: "$35.00",
     category: "Apparel",
     type: "Merch",
@@ -65,7 +65,7 @@ const MerchandisePage = () => {
           className="relative z-20"
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-glow tracking-tight uppercase italic">
-            Elite <span className="text-accent text-glow-accent italic">Lifestyle</span>
+            Starkx <span className="text-accent text-glow-accent italic">Lifestyle</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 font-bold uppercase tracking-widest text-xs">
             Premium apparel for the automotive purist. Minimalist design, maximum comfort.

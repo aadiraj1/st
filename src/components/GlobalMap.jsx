@@ -399,7 +399,7 @@ const GlobalMap = () => {
                 </div>
                 <div className="flex items-center gap-2 mt-3 pt-3 border-t border-white/10">
                   <div className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
-                  <p className="text-[9px] text-gray-500 uppercase tracking-widest font-bold">Active in Elite Auto Network</p>
+                  <p className="text-[9px] text-gray-500 uppercase tracking-widest font-bold">Active in Starkx Auto Network</p>
                 </div>
               </motion.div>
             )}

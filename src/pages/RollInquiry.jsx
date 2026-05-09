@@ -29,7 +29,7 @@ const RollInquiry = () => {
     const passedVariant = location.state?.product;
     if (passedVariant) {
         const found = filmVariants.find(v => v.name.toLowerCase() === passedVariant.name.toLowerCase());
-        setVariant(found || filmVariants[2]); // Default to Elite if not found
+        setVariant(found || filmVariants[2]); // Default to Starkx if not found
     } else {
         setVariant(filmVariants[2]); // Default
     }

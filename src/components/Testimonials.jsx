@@ -11,7 +11,7 @@ const testimonials = [
   {
     name: "Sarah Jenkins",
     car: "Tesla Model S Plaid",
-    text: "The ceramic coating is like a magic mirror. My car stays clean for weeks and water just slides right off. The team at elite are true professionals who care about their craft.",
+    text: "The ceramic coating is like a magic mirror. My car stays clean for weeks and water just slides right off. The team at Starkx are true professionals who care about their craft.",
     rating: 5
   },
   {
@@ -28,7 +28,7 @@ const Testimonials = () => {
       <div className="container mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-sm font-bold text-accent uppercase tracking-[0.3em] mb-4">Voice of the Client</h2>
-          <p className="text-4xl md:text-5xl font-black uppercase tracking-tight">The elite Experience</p>
+          <p className="text-4xl md:text-5xl font-black uppercase tracking-tight">The Starkx Experience</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

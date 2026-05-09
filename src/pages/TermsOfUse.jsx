@@ -7,12 +7,12 @@ const TermsOfUse = () => {
     {
       title: "1. Acceptance of Terms",
       icon: <ShieldCheck className="text-accent" size={24} />,
-      content: "By accessing, browsing, or using the Elite Auto website and services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use and all applicable laws and regulations. If you do not agree to these terms, you are not authorized to use our platform or purchase our products. These terms constitute a legally binding agreement between you and Elite Auto Manufacturing Corp."
+      content: "By accessing, browsing, or using the Starkx Auto website and services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use and all applicable laws and regulations. If you do not agree to these terms, you are not authorized to use our platform or purchase our products. These terms constitute a legally binding agreement between you and Starkx Auto Manufacturing Corp."
     },
     {
       title: "2. Intellectual Property Rights",
       icon: <BookOpen className="text-accent" size={24} />,
-      content: "All content on this site, including but not limited to text, graphics, logos, icons, images, audio clips, digital downloads, data compilations, and software (including our proprietary DAP Software), is the exclusive property of Elite Auto Manufacturing Corp. and is protected by international copyright, trademark, and patent laws. Unauthorized reproduction, modification, or distribution of these materials is strictly prohibited."
+      content: "All content on this site, including but not limited to text, graphics, logos, icons, images, audio clips, digital downloads, data compilations, and software (including our proprietary DAP Software), is the exclusive property of Starkx Auto Manufacturing Corp. and is protected by international copyright, trademark, and patent laws. Unauthorized reproduction, modification, or distribution of these materials is strictly prohibited."
     },
     {
       title: "3. User License & Restrictions",
@@ -27,12 +27,12 @@ const TermsOfUse = () => {
     {
       title: "5. Disclaimer of Warranties",
       icon: <AlertCircle className="text-accent" size={24} />,
-      content: "Elite Auto products and services are provided on an 'as is' and 'as available' basis. We make no representations or warranties of any kind, express or implied, as to the operation of our services or the information, content, materials, or products included. You expressly agree that your use of our services is at your sole risk."
+      content: "Starkx Auto products and services are provided on an 'as is' and 'as available' basis. We make no representations or warranties of any kind, express or implied, as to the operation of our services or the information, content, materials, or products included. You expressly agree that your use of our services is at your sole risk."
     },
     {
       title: "6. Limitation of Liability",
       icon: <AlertCircle className="text-accent" size={24} />,
-      content: "Elite Auto Manufacturing Corp. shall not be liable for any direct, indirect, incidental, special, or consequential damages resulting from the use or inability to use our products or services, even if we have been advised of the possibility of such damages. This includes, but is not limited to, damages for loss of profits, data, or other intangibles."
+      content: "Starkx Auto Manufacturing Corp. shall not be liable for any direct, indirect, incidental, special, or consequential damages resulting from the use or inability to use our products or services, even if we have been advised of the possibility of such damages. This includes, but is not limited to, damages for loss of profits, data, or other intangibles."
     }
   ];
 
@@ -63,7 +63,7 @@ const TermsOfUse = () => {
             Terms Of <span className="text-accent underline decoration-4 underline-offset-8">Use</span>
           </h1>
           <p className="text-gray-500 max-w-2xl mx-auto text-lg font-medium leading-relaxed">
-            Last Updated: April 29, 2026. These terms govern your access to and use of Elite Auto's global digital ecosystem and professional protection services.
+            Last Updated: April 29, 2026. These terms govern your access to and use of Starkx Auto's global digital ecosystem and professional protection services.
           </p>
         </motion.div>
 
