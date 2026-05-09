@@ -57,15 +57,22 @@ const Navbar = () => {
           <Link to="/" className="flex items-center gap-2 md:gap-3 group cursor-pointer flex-shrink-0">
             <motion.div
               whileHover={{ rotate: 15 }}
-              className="w-8 h-8 md:w-10 md:h-10 bg-accent rounded-sm flex items-center justify-center font-black text-black skew-x-[-12deg] shadow-[0_0_20px_rgba(0,174,239,0.4)]"
+              animate={{
+                boxShadow: [
+                  "0 0 10px rgba(0,174,239,0.4)",
+                  "0 0 30px rgba(0,174,239,0.8)",
+                  "0 0 10px rgba(0,174,239,0.4)"
+                ]
+              }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              className="w-8 h-8 md:w-10 md:h-10 bg-accent rounded-sm flex items-center justify-center font-black text-black skew-x-[-12deg]"
             >
-              E
+              S
             </motion.div>
             <div className="flex flex-col leading-none">
               <span className="text-lg md:text-2xl font-black tracking-tighter uppercase italic">
-                Starkx <span className="text-accent underline decoration-4 underline-offset-4">Auto</span>
+                Starkx<span className="text-accent">.pro</span>
               </span>
-              <span className="text-[8px] md:text-[10px] font-bold tracking-[0.3em] md:tracking-[0.4em] uppercase text-gray-500 mt-0.5">Manufacturing</span>
             </div>
           </Link>
 

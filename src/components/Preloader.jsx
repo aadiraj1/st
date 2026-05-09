@@ -66,6 +66,23 @@ const Preloader = () => {
               animate="animate"
               className="flex flex-col items-center"
             >
+              {/* Animated Logo Mark */}
+              <motion.div
+                animate={{ 
+                  rotate: [0, 15, -15, 0],
+                  scale: [1, 1.1, 1],
+                  boxShadow: [
+                    "0 0 20px rgba(0,174,239,0.2)",
+                    "0 0 60px rgba(0,174,239,0.8)",
+                    "0 0 20px rgba(0,174,239,0.2)"
+                  ]
+                }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                className="w-16 h-16 md:w-24 md:h-24 bg-accent rounded-md flex items-center justify-center font-black text-4xl md:text-6xl text-black skew-x-[-15deg] mb-8"
+              >
+                S
+              </motion.div>
+              
               <h1 className="text-4xl md:text-6xl font-black tracking-[0.3em] text-white italic mb-4">
                 STARKX<span className="text-accent">.PRO</span>
               </h1>

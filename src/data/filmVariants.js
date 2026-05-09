@@ -34,9 +34,9 @@ export const filmVariants = [
     }
   },
   {
-    id: "Starkx",
-    slug: "Starkx",
-    name: "Starkx",
+    id: "elite",
+    slug: "elite",
+    name: "Elite",
     thickness: "8.5 mil",
     warranty: "7 Years",
     desc: "The ultimate balance of thickness and workability. Ideal for high-impact zones like lower rockers and bumpers.",

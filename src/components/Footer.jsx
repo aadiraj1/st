@@ -10,8 +10,8 @@ const Footer = () => {
           {/* Brand Col */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-10 group cursor-pointer">
-              <div className="w-8 h-8 bg-accent rounded-sm flex items-center justify-center font-bold text-black skew-x-[-15deg] group-hover:rotate-12 transition-transform">E</div>
-              <span className="text-xl font-black tracking-tighter uppercase italic">Starkx <span className="text-accent underline decoration-2 underline-offset-4">Auto</span></span>
+              <div className="w-8 h-8 bg-accent rounded-sm flex items-center justify-center font-bold text-black skew-x-[-15deg] group-hover:rotate-12 transition-transform">S</div>
+              <span className="text-xl font-black tracking-tighter uppercase italic">Starkx<span className="text-accent">.pro</span></span>
             </div>
             <p className="text-gray-500 text-xs font-medium leading-relaxed mb-10 max-w-xs uppercase tracking-tight">
               A global leader in protective films and surface engineering. Defining the future of surface preservation for automotive, marine, and architectural assets.
