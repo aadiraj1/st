@@ -39,6 +39,8 @@ import BlogPostDetail from './pages/BlogPostDetail';
 import FilmVariantDetail from './pages/FilmVariantDetail';
 import RollInquiry from './pages/RollInquiry';
 import Chatbot from './components/Chatbot';
+import Preloader from './components/Preloader';
+
 
 
 
@@ -78,6 +80,8 @@ function App() {
   return (
     <div className="relative selection:bg-accent selection:text-white grainy-bg">
       <ScrollToTop />
+      <Preloader />
+
 
       {/* Custom Cursor */}
       <motion.div

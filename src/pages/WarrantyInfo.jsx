@@ -130,7 +130,7 @@ const WarrantyInfo = () => {
       <section className="px-4 md:px-8 max-w-4xl mx-auto text-center opacity-40">
         <div className="flex justify-center mb-6 text-gray-500"><AlertCircle size={40} /></div>
         <p className="text-[10px] font-bold uppercase tracking-widest leading-loose">
-          Starkx Auto Manufacturing Corp reserves the right to inspect any claim physically or digitally before approval. Replacement coverage is limited to material costs only unless otherwise specified by your certified dealer's labor agreement. Void where prohibited by law.
+          Starkx.Pro Manufacturing Corp reserves the right to inspect any claim physically or digitally before approval. Replacement coverage is limited to material costs only unless otherwise specified by your certified dealer's labor agreement. Void where prohibited by law.
         </p>
       </section>
     </div>

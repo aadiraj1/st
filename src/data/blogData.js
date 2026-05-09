@@ -75,15 +75,15 @@ export const blogPosts = [
     id: 4,
     slug: "global-expo-2026-recap",
     title: "Global Expo 2026 Recap",
-    excerpt: "Starkx Auto's highlights from the International Window Film & Protective Shop Conference.",
+    excerpt: "Starkx.Pro's highlights from the International Window Film & Protective Shop Conference.",
     content: `
-      <p>Last month in Las Vegas, Starkx Auto unveiled our new Master 9.5 mil series. The response was overwhelming. Installers from 40 countries tested our films on complex curves, praising the increased tack and reduced install time despite the extreme thickness.</p>
+      <p>Last month in Las Vegas, Starkx.Pro unveiled our new Master 9.5 mil series. The response was overwhelming. Installers from 40 countries tested our films on complex curves, praising the increased tack and reduced install time despite the extreme thickness.</p>
 
       <h3>A New Standard: Master 9.5 mil</h3>
       <p>The Master series was the star of the show. While most competitors stop at 8 mil, our engineering team successfully maintained 100% clarity at 9.5 mil. This opens up new possibilities for industrial and off-road applications where extreme debris is a constant threat.</p>
 
       <h3>Global Expansion</h3>
-      <p>We also announced our partnership with three new global distributors in the Middle East and Southeast Asia, including our new certified hub in Pakistan. This expansion ensures that Starkx Auto products, from Nova to Master, will be available in every major automotive hub by the end of 2026.</p>
+      <p>We also announced our partnership with three new global distributors in the Middle East and Southeast Asia, including our new certified hub in Pakistan. This expansion ensures that Starkx.Pro products, from Nova to Master, will be available in every major automotive hub by the end of 2026.</p>
 
       <p>Recap: The future of surface protection is thicker, clearer, and more accessible than ever before. We're proud to be leading the charge with our 4-tier product lineup.</p>
     `,

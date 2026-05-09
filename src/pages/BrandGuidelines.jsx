@@ -19,7 +19,7 @@ const BrandGuidelines = () => {
             Brand <span className="text-accent underline decoration-4 underline-offset-8">Guidelines</span>
           </h1>
           <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed font-medium">
-            Welcome to the Starkx Auto design system. We maintain a rigorous visual identity to ensure our brand reflects the precision and performance of our engineering. Use these resources to represent Starkx Auto accurately across all media.
+            Welcome to the Starkx.Pro design system. We maintain a rigorous visual identity to ensure our brand reflects the precision and performance of our engineering. Use these resources to represent Starkx.Pro accurately across all media.
           </p>
         </motion.div>
       </section>

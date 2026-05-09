@@ -29,7 +29,7 @@ const faqCategories = [
     icon: <Book size={20} />,
     questions: [
       { q: "What does the 10-year warranty cover?", a: "Our comprehensive warranty covers yellowing, staining, cracking, blistering, and delamination. It is backed by our global network of certified dealers." },
-      { q: "Is the warranty transferable?", a: "Yes, the Starkx Auto warranty is transferable to subsequent owners, provided the original installation was performed by a certified dealer and the vehicle care requirements have been met." }
+      { q: "Is the warranty transferable?", a: "Yes, the Starkx.Pro warranty is transferable to subsequent owners, provided the original installation was performed by a certified dealer and the vehicle care requirements have been met." }
     ]
   }
 ];

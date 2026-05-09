@@ -22,7 +22,7 @@ const benefits = [
   {
     icon: <BookOpen size={24} />,
     title: 'Market Access',
-    desc: 'Leverage the Starkx Auto brand power and our global marketing engine to drive leads.'
+    desc: 'Leverage the Starkx.Pro brand power and our global marketing engine to drive leads.'
   }
 ];
 

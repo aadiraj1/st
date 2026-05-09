@@ -26,7 +26,7 @@ const InvestorRelations = () => {
             Investor <span className="text-accent underline decoration-4 underline-offset-8">Relations</span>
           </h1>
           <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed font-medium">
-            Starkx Auto Protection is committed to delivering long-term value to our shareholders through relentless innovation and global market expansion.
+            Starkx.Pro Protection is committed to delivering long-term value to our shareholders through relentless innovation and global market expansion.
           </p>
         </motion.div>
       </section>
@@ -94,9 +94,9 @@ const InvestorRelations = () => {
          </div>
          <div className="space-y-6">
             {[
-              { date: "May 02, 2026", title: "Starkx Auto Protection Announces Q1 2026 Earnings with 45% YOY Growth.", source: "Press Release" },
+              { date: "May 02, 2026", title: "Starkx.Pro Protection Announces Q1 2026 Earnings with 45% YOY Growth.", source: "Press Release" },
               { date: "April 15, 2026", title: "New Strategic Partnership with Global Logistics Leader for Middle East Expansion.", source: "Corporate Update" },
-              { date: "March 28, 2026", title: "Starkx Auto Protection to Participate in Upcoming Investor Conference in NYC.", source: "Events" }
+              { date: "March 28, 2026", title: "Starkx.Pro Protection to Participate in Upcoming Investor Conference in NYC.", source: "Events" }
             ].map((news, idx) => (
               <div key={idx} className="bg-secondary/10 border border-white/5 p-8 rounded-3xl flex flex-col md:flex-row justify-between items-center hover:bg-secondary/30 transition-all cursor-pointer">
                  <div className="flex flex-col gap-2 mb-6 md:mb-0">

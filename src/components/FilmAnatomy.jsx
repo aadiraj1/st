@@ -56,7 +56,7 @@ const FilmAnatomy = () => {
             The Anatomy of Protection
           </motion.p>
           <p className="text-gray-400 mt-4 max-w-xl mx-auto text-sm font-medium px-4">
-            The multi-layer technology that makes Starkx Auto film the global manufacturing standard.
+            The multi-layer technology that makes Starkx.Pro film the global manufacturing standard.
           </p>
         </div>
 

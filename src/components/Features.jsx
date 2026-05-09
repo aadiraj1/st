@@ -31,7 +31,7 @@ const Features = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-20">
           <h2 className="text-sm font-bold text-accent uppercase tracking-[0.3em] mb-4">The Standard of Excellence</h2>
-          <p className="text-4xl md:text-5xl font-black uppercase tracking-tight">Why Starkx Auto?</p>
+          <p className="text-4xl md:text-5xl font-black uppercase tracking-tight">Why Starkx.Pro?</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

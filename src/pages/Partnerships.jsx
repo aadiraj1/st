@@ -10,7 +10,7 @@ const partnershipTiers = [
    },
    {
       title: "B2B Distribution",
-      desc: "Regional and global distribution rights for Starkx Auto films and products.",
+      desc: "Regional and global distribution rights for Starkx.Pro films and products.",
       features: ["Exclusive Territories", "Marketing Support", "Logistics Priority"]
    },
    {

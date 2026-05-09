@@ -21,7 +21,7 @@ const DAPSoftware = () => {
             DAP <span className="text-accent underline decoration-4 underline-offset-8">V3.0</span>
           </h1>
           <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed font-medium">
-            The world's most advanced pattern cutting software. Experience unparalleled precision with our library of over 100,000 vehicle patterns, engineered specifically for Starkx Auto films.
+            The world's most advanced pattern cutting software. Experience unparalleled precision with our library of over 100,000 vehicle patterns, engineered specifically for Starkx.Pro films.
           </p>
         </motion.div>
       </section>
@@ -52,7 +52,7 @@ const DAPSoftware = () => {
                <Lock size={32} />
             </div>
             <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter italic mb-6 italic">Login Required</h2>
-            <p className="text-gray-400 text-lg mb-12 max-w-xl mx-auto font-medium">Access to the DAP Software and its comprehensive pattern library is restricted to certified Starkx Auto partners.</p>
+            <p className="text-gray-400 text-lg mb-12 max-w-xl mx-auto font-medium">Access to the DAP Software and its comprehensive pattern library is restricted to certified Starkx.Pro partners.</p>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
               <Link to="/dealer-login" className="bg-accent text-black font-black uppercase tracking-widest text-xs px-12 py-5 hover:bg-white transition-all shadow-[0_20px_40px_rgba(0,174,239,0.2)] flex items-center gap-3">
                 Dealer Login <ChevronRight size={18} />

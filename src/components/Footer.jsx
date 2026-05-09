@@ -75,7 +75,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-16 border-t border-white/5 flex flex-col lg:flex-row justify-between items-center gap-10">
           <p className="text-gray-600 text-[9px] font-black uppercase tracking-[0.4em]">
-            © {new Date().getFullYear()} Starkx Auto Manufacturing Corp. All Rights Reserved.
+            © {new Date().getFullYear()} Starkx.Pro Manufacturing Corp. All Rights Reserved.
           </p>
           <div className="flex flex-wrap justify-center gap-10">
             <Link to="/terms-of-use" className="text-gray-600 text-[9px] font-black uppercase tracking-[0.4em] cursor-pointer hover:text-white transition-colors">Terms Of Use</Link>

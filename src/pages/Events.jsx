@@ -9,7 +9,7 @@ const upcomingEvents = [
     date: "June 12-15, 2026",
     location: "Las Vegas, NV",
     type: "Industry Conference",
-    description: "The world's largest gathering of protective film professionals. Starkx Auto will be unveiling our next-generation 'Titan' series film with active molecular memory.",
+    description: "The world's largest gathering of protective film professionals. Starkx.Pro will be unveiling our next-generation 'Titan' series film with active molecular memory.",
     capacity: "5,000+ Attendees",
     featured: true
   },

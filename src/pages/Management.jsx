@@ -6,14 +6,14 @@ const leaders = [
   {
     name: "Dr. Aris Vance",
     role: "Chief Executive Officer & Founder",
-    bio: "With a PhD in Polymer Physics from Stanford, Dr. Vance spent a decade leading material science teams in the aerospace industry before founding Starkx Auto. His obsession with 'optical clarity' led to the development of the Titan top-coat series. He believes that protection should never be a compromise for beauty.",
+    bio: "With a PhD in Polymer Physics from Stanford, Dr. Vance spent a decade leading material science teams in the aerospace industry before founding Starkx.Pro. His obsession with 'optical clarity' led to the development of the Titan top-coat series. He believes that protection should never be a compromise for beauty.",
     philosophy: "Precision is our only currency.",
     image: "/e5818c65-0f63-4627-a57b-217d4cff828a/m1.jpg"
   },
   {
     name: "Marcus Chen",
     role: "Chief Technology Officer",
-    bio: "Marcus is the architect behind the DAP (Design Access Program) pattern software. Formerly a senior developer at a leading CAD/CAM firm, he joined Starkx Auto in 2015 to digitize the detailing industry. Under his leadership, our pattern library has grown to the largest in the world with 99.9% fitment accuracy.",
+    bio: "Marcus is the architect behind the DAP (Design Access Program) pattern software. Formerly a senior developer at a leading CAD/CAM firm, he joined Starkx.Pro in 2015 to digitize the detailing industry. Under his leadership, our pattern library has grown to the largest in the world with 99.9% fitment accuracy.",
     philosophy: "Software is the backbone of craftsmanship.",
     image: "/e5818c65-0f63-4627-a57b-217d4cff828a/m2.jpg"
   },
@@ -122,7 +122,7 @@ const Management = () => {
             Corporate Governance
           </h3>
           <p className="text-gray-500 max-w-xl mx-auto text-sm font-medium leading-relaxed">
-            Starkx Auto adheres to the highest standards of transparency and ethics. Our global advisory board includes veterans from the automotive and chemical industries.
+            Starkx.Pro adheres to the highest standards of transparency and ethics. Our global advisory board includes veterans from the automotive and chemical industries.
           </p>
         </div>
       </section>

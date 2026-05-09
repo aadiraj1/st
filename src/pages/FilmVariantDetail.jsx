@@ -149,7 +149,7 @@ const FilmVariantDetail = () => {
           <div className="max-w-4xl mx-auto h-4 bg-white/5 rounded-full relative overflow-hidden">
             <motion.div
               initial={{ width: 0 }}
-              whileInView={{ width: `${(parseFloat(variant.thickness) / 11) * 100}%` }}
+              whileInView={{ width: `${(parseFloat(variant.thickness) / 9.5) * 100}%` }}
               viewport={{ once: true }}
               transition={{ duration: 1.5, ease: "circOut" }}
               className="absolute inset-y-0 left-0 bg-accent shadow-[0_0_20px_rgba(0,174,239,0.8)]"
@@ -158,7 +158,7 @@ const FilmVariantDetail = () => {
           <div className="flex justify-between mt-6 text-[10px] font-black text-gray-500 uppercase tracking-widest">
             <span>0 MIL</span>
             <span>PROTECTION DEPTH</span>
-            <span>12 MIL</span>
+            <span>9.5 MIL</span>
           </div>
         </div>
       </section>

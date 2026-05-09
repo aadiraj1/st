@@ -74,7 +74,7 @@ const Hero = () => {
             variants={itemVariants}
             className="max-w-xl md:max-w-3xl mx-auto text-sm sm:text-base md:text-xl lg:text-2xl text-gray-400 mb-8 md:mb-12 font-medium leading-relaxed tracking-tight px-2"
           >
-            Starkx Auto Engineering designs and manufactures the world's most advanced self-healing films. From race tracks to city streets, we define the standard of invisible armor.
+            Starkx.Pro Engineering designs and manufactures the world's most advanced self-healing films. From race tracks to city streets, we define the standard of invisible armor.
           </motion.p>
 
           {/* Buttons */}

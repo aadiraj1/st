@@ -153,7 +153,7 @@ const BecomeDealer = () => {
               </div>
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter italic mb-6 leading-none">Application <br/>Received</h2>
               <p className="text-gray-400 font-bold uppercase text-xs tracking-widest leading-relaxed mb-10">
-                Thank you for your interest in Starkx Auto. Our dealer relations team will review your credentials and contact you to let you know if you are eligible to join the network.
+                Thank you for your interest in Starkx.Pro. Our dealer relations team will review your credentials and contact you to let you know if you are eligible to join the network.
               </p>
               <button 
                 onClick={() => navigate('/')}
