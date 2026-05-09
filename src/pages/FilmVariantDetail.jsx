@@ -30,14 +30,18 @@ const FilmVariantDetail = () => {
           style={{ y: y1, opacity }}
           className="absolute inset-0 z-0"
         >
+          {/* Video Background */}
+          <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0 opacity-40">
+            <source src="/e5818c65-0f63-4627-a57b-217d4cff828a/bck.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black z-10" />
           <div
-            className="absolute inset-0 blur-[120px] opacity-20 animate-pulse-slow"
+            className="absolute inset-0 blur-[120px] opacity-20 animate-pulse-slow z-20"
             style={{ backgroundColor: variant.color }}
           />
           {/* Abstract background elements */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white/5 rounded-full animate-spin-slow" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-accent/10 rounded-full animate-reverse-spin" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white/5 rounded-full animate-spin-slow z-10" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-accent/10 rounded-full animate-reverse-spin z-10" />
         </motion.div>
 
         <div className="container mx-auto px-6 relative z-20 text-center">

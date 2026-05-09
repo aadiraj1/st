@@ -52,19 +52,25 @@ const SpecialOffersPage = () => {
   return (
     <div className="pt-24 min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 md:px-8 max-w-7xl mx-auto text-center">
+      <section className="relative py-20 px-4 md:px-8 max-w-7xl mx-auto text-center overflow-hidden rounded-[40px] mt-8">
+        {/* Video Background */}
+        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0 opacity-40">
+          <source src="/e5818c65-0f63-4627-a57b-217d4cff828a/bck.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black z-10" />
+
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, type: "spring" }}
-          className="relative inline-block"
+          className="relative inline-block z-20"
         >
           <div className="absolute inset-0 bg-accent/20 blur-[100px] rounded-full" />
           <h1 className="text-5xl md:text-8xl font-black mb-6 uppercase tracking-tighter relative z-10 italic">
             Flash <span className="text-accent text-glow-accent italic">Deals</span>
           </h1>
         </motion.div>
-        <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-bold uppercase tracking-widest text-xs">
+        <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-bold uppercase tracking-widest text-xs relative z-20">
           Limited-time bundles and exclusive discounts on professional-grade protection.
         </p>
 
@@ -73,7 +79,7 @@ const SpecialOffersPage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="flex items-center justify-center gap-4 text-3xl md:text-5xl font-mono font-bold text-accent mb-16"
+            className="flex items-center justify-center gap-4 text-3xl md:text-5xl font-mono font-bold text-accent mb-16 relative z-20"
         >
             <Timer className="w-10 h-10 text-white" />
             <div className="bg-white/10 px-4 py-2 rounded-lg border border-white/20">

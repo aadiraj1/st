@@ -152,11 +152,17 @@ const Accessories = () => {
 
   return (
     <div className="pt-28 min-h-screen bg-black text-white pb-32">
-      <div className="absolute top-0 left-0 w-full h-[500px] bg-gradient-to-b from-accent/5 to-transparent pointer-events-none" />
+      {/* Video Background */}
+      <div className="container mx-auto px-6 relative z-10 overflow-hidden rounded-[40px] py-20 mt-4">
+        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0 opacity-40">
+          <source src="/e5818c65-0f63-4627-a57b-217d4cff828a/bck.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black z-10" />
 
-      <section className="container mx-auto px-6 relative z-10">
+
+        {/* Header content moved into the div above */}
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8 relative z-20">
           <div className="max-w-2xl">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -230,7 +236,7 @@ const Accessories = () => {
             </div>
           )}
         </div>
-      </section>
+      </div>
 
       {/* Quick Add Popup */}
       <AnimatePresence>

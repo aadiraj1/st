@@ -29,7 +29,7 @@ const Hero = () => {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Video Background */}
         <video autoPlay muted loop playsInline className="absolute w-full h-full object-cover z-0">
-          <source src="" type="video/mp4" />
+          <source src="/e5818c65-0f63-4627-a57b-217d4cff828a/bck.mp4" type="video/mp4" />
         </video>
 
         {/* Overlays */}

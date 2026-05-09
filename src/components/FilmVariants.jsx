@@ -91,7 +91,7 @@ const FilmVariants = () => {
 
               {/* Featured Badge */}
               {item.featured && (
-                <div className="absolute top-0 right-10 translate-y-[-50%] bg-accent text-black px-4 py-1 font-black uppercase text-[9px] tracking-widest skew-x-[-15deg]">
+                <div className="absolute top-4 right-4 bg-accent text-black px-4 py-1 font-black uppercase text-[9px] tracking-widest skew-x-[-15deg] z-30 shadow-lg">
                   Industry Leader
                 </div>
               )}

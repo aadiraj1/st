@@ -10,7 +10,7 @@ const programs = [
     level: "Advanced",
     attendees: "Max 12 per class",
     description: "Our flagship program covering advanced bulk-cutting, edge wrapping, and complex surface engineering. Required for 'Master Installer' status.",
-    image: "bg-blue-900/20"
+    image: "/e5818c65-0f63-4627-a57b-217d4cff828a/wrk1.png"
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const programs = [
     level: "Intermediate",
     attendees: "Max 8 per class",
     description: "Learn the science of surface decontamination and multi-stage paint correction techniques required before PPF application.",
-    image: "bg-purple-900/20"
+    image: "/e5818c65-0f63-4627-a57b-217d4cff828a/autom.jpg"
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const programs = [
     level: "All Levels",
     attendees: "Unlimited (Virtual)",
     description: "Focused on sales strategy, high-ticket closing, and operational efficiency for growing detailing studios.",
-    image: "bg-teal-900/20"
+    image: "/e5818c65-0f63-4627-a57b-217d4cff828a/m2.jpg"
   }
 ];
 
@@ -75,11 +75,14 @@ const TrainingCertification = () => {
               transition={{ delay: idx * 0.1 }}
               className="bg-secondary/20 border border-white/10 rounded-3xl overflow-hidden flex flex-col group hover:border-accent/30 transition-all"
             >
-              <div className={`h-48 ${prog.image} relative overflow-hidden`}>
-                 <div className="absolute top-4 right-4 bg-accent text-black text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-full">{prog.level}</div>
-                 <div className="absolute inset-0 flex items-center justify-center opacity-10 group-hover:scale-110 transition-transform duration-700">
-                    <BookOpen size={80} />
-                 </div>
+              <div className="h-64 relative overflow-hidden">
+                 <img 
+                    src={prog.image} 
+                    alt={prog.title} 
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60 group-hover:opacity-100" 
+                 />
+                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                 <div className="absolute top-4 right-4 bg-accent text-black text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-full z-10 shadow-lg">{prog.level}</div>
               </div>
               <div className="p-8 flex-1 flex flex-col">
                 <h3 className="text-2xl font-black uppercase tracking-tight mb-4 group-hover:text-accent transition-colors">{prog.title}</h3>

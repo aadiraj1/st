@@ -42,12 +42,18 @@ const ShopMain = () => {
   return (
     <div className="pt-24 min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 md:px-8 max-w-7xl mx-auto">
+      <section className="relative py-20 px-4 md:px-8 max-w-7xl mx-auto overflow-hidden rounded-[40px] mt-8">
+        {/* Video Background */}
+        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0 opacity-40">
+          <source src="/e5818c65-0f63-4627-a57b-217d4cff828a/bck.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black z-10" />
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center"
+          className="text-center relative z-20"
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-glow">
             Elite <span className="text-accent text-glow-accent">Shop</span>

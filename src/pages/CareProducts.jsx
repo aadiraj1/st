@@ -64,11 +64,18 @@ const CareProductsPage = () => {
   return (
     <div className="pt-24 min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 md:px-8 max-w-7xl mx-auto text-center">
+      <section className="relative py-20 px-4 md:px-8 max-w-7xl mx-auto text-center overflow-hidden rounded-[40px] mt-8">
+        {/* Video Background */}
+        <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0 opacity-40">
+          <source src="/e5818c65-0f63-4627-a57b-217d4cff828a/bck.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black z-10" />
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          className="relative z-20"
         >
           <h1 className="text-5xl md:text-7xl font-black mb-6 text-glow uppercase italic">
             Care <span className="text-accent text-glow-accent italic">Products</span>
@@ -190,11 +197,7 @@ const CareProductsPage = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
 
               {/* OPTIONAL CENTER ICON (fade out on hover) */}
-              <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-0 pointer-events-none">
-                <div className="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 shadow-2xl">
-                  <PlayCircle size={40} className="text-white ml-1" />
-                </div>
-              </div>
+
 
             </motion.div>
           </div>
