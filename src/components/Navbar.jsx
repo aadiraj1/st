@@ -27,26 +27,15 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Products', href: '/#variants' },
+    { name: 'Products', href: '/accessories' },
     { name: 'Shop', href: '/shop' },
     { name: 'Find Installer', href: '/#dealer-map' },
     { name: 'Articles', href: '/blog' },
-    { name: 'Dealer', href: '/#dealer' },
+    { name: 'Dealer', href: '/#dealer-map' },
   ];
 
   const handleNavClick = (href) => {
     setMobileMenuOpen(false);
-    // Handle hash navigation for same-page sections
-    if (href.startsWith('/#')) {
-      const id = href.replace('/#', '');
-      // If already on home page, scroll directly
-      if (window.location.pathname === '/') {
-        const el = document.getElementById(id);
-        if (el) {
-          setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
-        }
-      }
-    }
   };
 
   return (
