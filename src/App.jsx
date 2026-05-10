@@ -73,8 +73,39 @@ function App() {
     const handleMouseMove = (e) => {
       setMousePos({ x: e.clientX, y: e.clientY });
     };
+
+    // Disable right-click
+    const handleContextMenu = (e) => {
+      e.preventDefault();
+    };
+
+    // Disable common copy/save shortcuts
+    const handleKeyDown = (e) => {
+      // Disable Ctrl+C, Ctrl+V, Ctrl+S, Ctrl+U, F12
+      if (
+        (e.ctrlKey && (e.key === 'c' || e.key === 'v' || e.key === 's' || e.key === 'u')) ||
+        e.key === 'F12'
+      ) {
+        e.preventDefault();
+      }
+    };
+
+    // Disable copy
+    const handleCopy = (e) => {
+      e.preventDefault();
+    };
+
     window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    document.addEventListener('contextmenu', handleContextMenu);
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('copy', handleCopy);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('contextmenu', handleContextMenu);
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('copy', handleCopy);
+    };
   }, []);
 
   return (
