@@ -38,6 +38,7 @@ import IndustrySolutions from './pages/IndustrySolutions';
 import BlogPostDetail from './pages/BlogPostDetail';
 import FilmVariantDetail from './pages/FilmVariantDetail';
 import RollInquiry from './pages/RollInquiry';
+import WarrantyCheck from './pages/WarrantyCheck';
 import Chatbot from './components/Chatbot';
 import Preloader from './components/Preloader';
 
@@ -167,6 +168,7 @@ function App() {
         <Route path="/solutions/:slug" element={<IndustrySolutions />} />
         <Route path="/film-variant/:slug" element={<FilmVariantDetail />} />
         <Route path="/roll-inquiry" element={<RollInquiry />} />
+        <Route path="/warranty-check" element={<WarrantyCheck />} />
 
 
 
