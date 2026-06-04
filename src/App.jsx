@@ -39,6 +39,8 @@ import BlogPostDetail from './pages/BlogPostDetail';
 import FilmVariantDetail from './pages/FilmVariantDetail';
 import RollInquiry from './pages/RollInquiry';
 import WarrantyCheck from './pages/WarrantyCheck';
+import StudiosLogin from './pages/StudiosLogin';
+import StudiosDashboard from './pages/StudiosDashboard';
 import Chatbot from './components/Chatbot';
 import Preloader from './components/Preloader';
 
@@ -75,38 +77,8 @@ function App() {
       setMousePos({ x: e.clientX, y: e.clientY });
     };
 
-    // Disable right-click
-    const handleContextMenu = (e) => {
-      e.preventDefault();
-    };
-
-    // Disable common copy/save shortcuts
-    const handleKeyDown = (e) => {
-      // Disable Ctrl+C, Ctrl+V, Ctrl+S, Ctrl+U, F12
-      if (
-        (e.ctrlKey && (e.key === 'c' || e.key === 'v' || e.key === 's' || e.key === 'u')) ||
-        e.key === 'F12'
-      ) {
-        e.preventDefault();
-      }
-    };
-
-    // Disable copy
-    const handleCopy = (e) => {
-      e.preventDefault();
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('contextmenu', handleContextMenu);
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('copy', handleCopy);
-
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('contextmenu', handleContextMenu);
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('copy', handleCopy);
-    };
+    // Inspection restrictions disabled for development/debugging
+    return () => {};
   }, []);
 
   return (
@@ -169,6 +141,8 @@ function App() {
         <Route path="/film-variant/:slug" element={<FilmVariantDetail />} />
         <Route path="/roll-inquiry" element={<RollInquiry />} />
         <Route path="/warranty-check" element={<WarrantyCheck />} />
+        <Route path="/studios-login" element={<StudiosLogin />} />
+        <Route path="/studios-dashboard" element={<StudiosDashboard />} />
 
 
 

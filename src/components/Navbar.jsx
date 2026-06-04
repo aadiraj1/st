@@ -44,25 +44,7 @@ const Navbar = () => {
         <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 md:gap-3 group cursor-pointer flex-shrink-0">
-            <motion.div
-              whileHover={{ rotate: 15 }}
-              animate={{
-                boxShadow: [
-                  "0 0 10px rgba(0,174,239,0.4)",
-                  "0 0 30px rgba(0,174,239,0.8)",
-                  "0 0 10px rgba(0,174,239,0.4)"
-                ]
-              }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="w-8 h-8 md:w-10 md:h-10 bg-accent rounded-sm flex items-center justify-center font-black text-black skew-x-[-12deg]"
-            >
-              S
-            </motion.div>
-            <div className="flex flex-col leading-none">
-              <span className="text-lg md:text-2xl font-black tracking-tighter uppercase italic">
-                Starkx<span className="text-accent">.pro</span>
-              </span>
-            </div>
+            <img src="/e5818c65-0f63-4627-a57b-217d4cff828a/logostk_transparent.png" alt="Starkx Logo" className="h-[101px] md:h-[140px] object-contain logo-glow-pulse -my-[34px] md:-my-14" />
           </Link>
 
           {/* Desktop Links */}
@@ -72,7 +54,7 @@ const Navbar = () => {
                 key={link.name}
                 to={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className="text-xs font-black hover:text-accent transition-colors uppercase tracking-[0.2em] relative group"
+                className="text-xs font-black text-accent hover:text-white transition-colors uppercase tracking-[0.2em] relative group"
               >
                 <motion.span
                   initial={{ opacity: 0, y: -10 }}
@@ -88,7 +70,7 @@ const Navbar = () => {
             {/* Cart Button */}
             <button
               onClick={() => setIsCartOpen(true)}
-              className="relative p-2 text-white hover:text-accent transition-colors"
+              className="relative p-2 text-accent hover:text-white transition-colors"
             >
               <ShoppingCart size={20} />
               {cartItems.length > 0 && (
@@ -153,10 +135,10 @@ const Navbar = () => {
                     <Link
                       to={link.href}
                       onClick={() => handleNavClick(link.href)}
-                      className="flex items-center justify-between w-full py-4 border-b border-white/5 text-lg font-black uppercase tracking-tight hover:text-accent transition-colors"
+                      className="flex items-center justify-between w-full py-4 border-b border-accent/10 text-lg font-black uppercase tracking-tight text-accent hover:text-white transition-colors"
                     >
                       {link.name}
-                      <ChevronRight size={16} className="text-gray-600" />
+                      <ChevronRight size={16} className="text-accent/50" />
                     </Link>
                   </motion.div>
                 ))}

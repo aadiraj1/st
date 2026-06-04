@@ -66,26 +66,21 @@ const Preloader = () => {
               animate="animate"
               className="flex flex-col items-center"
             >
-              {/* Animated Logo Mark */}
-              <motion.div
+              {/* Animated Logo */}
+              <motion.img
+                src="/e5818c65-0f63-4627-a57b-217d4cff828a/logostk_transparent.png"
+                alt="Starkx Logo"
                 animate={{ 
-                  rotate: [0, 15, -15, 0],
-                  scale: [1, 1.1, 1],
-                  boxShadow: [
-                    "0 0 20px rgba(0,174,239,0.2)",
-                    "0 0 60px rgba(0,174,239,0.8)",
-                    "0 0 20px rgba(0,174,239,0.2)"
+                  scale: [1, 1.05, 1],
+                  filter: [
+                    "drop-shadow(0 0 15px rgba(0,174,239,0.4))",
+                    "drop-shadow(0 0 35px rgba(0,174,239,0.8))",
+                    "drop-shadow(0 0 15px rgba(0,174,239,0.4))"
                   ]
                 }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                className="w-16 h-16 md:w-24 md:h-24 bg-accent rounded-md flex items-center justify-center font-black text-4xl md:text-6xl text-black skew-x-[-15deg] mb-8"
-              >
-                S
-              </motion.div>
-              
-              <h1 className="text-4xl md:text-6xl font-black tracking-[0.3em] text-white italic mb-4">
-                STARKX<span className="text-accent">.PRO</span>
-              </h1>
+                className="h-[231px] md:h-[345px] object-contain -mb-8"
+              />
               
               {/* Animated Progress Line */}
               <div className="w-64 h-[2px] bg-white/10 relative overflow-hidden">

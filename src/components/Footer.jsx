@@ -10,8 +10,7 @@ const Footer = () => {
           {/* Brand Col */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-10 group cursor-pointer">
-              <div className="w-8 h-8 bg-accent rounded-sm flex items-center justify-center font-bold text-black skew-x-[-15deg] group-hover:rotate-12 transition-transform">S</div>
-              <span className="text-xl font-black tracking-tighter uppercase italic">Starkx<span className="text-accent">.pro</span></span>
+              <img src="/e5818c65-0f63-4627-a57b-217d4cff828a/logostk_transparent.png" alt="Starkx Logo" className="h-[72px] md:h-24 object-contain logo-glow-pulse group-hover:brightness-125 transition-all duration-300" />
             </div>
             <p className="text-gray-500 text-xs font-medium leading-relaxed mb-10 max-w-xs uppercase tracking-tight">
               A global leader in protective films and surface engineering. Defining the future of surface preservation for automotive, marine, and architectural assets.
@@ -55,6 +54,7 @@ const Footer = () => {
               <li><Link to="/pre-cut-library" className="text-gray-500 hover:text-accent text-[11px] font-bold transition-colors uppercase tracking-tight">Pre-Cut Library</Link></li>
               <li><Link to="/become-dealer" className="text-gray-500 hover:text-accent text-[11px] font-bold transition-colors uppercase tracking-tight">Become a Dealer</Link></li>
               <li><Link to="/training-certification" className="text-gray-500 hover:text-accent text-[11px] font-bold transition-colors uppercase tracking-tight">Training & Certification</Link></li>
+              <li><Link to="/studios-login" className="text-gray-500 hover:text-accent text-[11px] font-bold transition-colors uppercase tracking-tight">Studios Login</Link></li>
             </ul>
           </div>
 
