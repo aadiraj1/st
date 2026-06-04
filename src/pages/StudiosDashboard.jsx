@@ -152,10 +152,10 @@ const StudiosDashboard = () => {
                     className="w-full bg-[#1A1A1A] border border-white/10 rounded-xl py-4 pl-12 pr-4 outline-none focus:border-accent transition-colors text-sm font-medium appearance-none"
                   >
                     <option value="">Select Service</option>
-                    <option value="Nova">Nova</option>
-                    <option value="Plus">Plus</option>
-                    <option value="Elite">Elite</option>
-                    <option value="Master">Master</option>
+                    <option value="Nova">Nova — 3 Years Warranty</option>
+                    <option value="Plus">Plus — 4 Years Warranty</option>
+                    <option value="Elite">Elite — 7 Years Warranty</option>
+                    <option value="Master">Master — 10 Years Warranty</option>
                   </select>
                 </div>
               </div>
