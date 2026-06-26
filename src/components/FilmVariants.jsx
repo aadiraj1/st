@@ -33,8 +33,8 @@ const FilmVariants = () => {
           </motion.p>
         </div>
 
-        {/* Responsive grid: 1 col mobile → 2 tablet → 4 desktop */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 lg:gap-8">
+        {/* Responsive flex layout to handle 5 cards nicely */}
+        <div className="flex flex-wrap justify-center gap-5 md:gap-6 lg:gap-8">
           {filmVariants.map((item, idx) => (
             <motion.div
               key={idx}
@@ -42,7 +42,7 @@ const FilmVariants = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className={`relative group bg-secondary/30 border border-white/5 p-6 md:p-8 lg:p-10 flex flex-col justify-between hover:border-accent/30 transition-all duration-500 overflow-hidden ${item.featured ? 'lg:-translate-y-6 bg-secondary/50 border-accent/20' : ''}`}
+              className={`relative group bg-secondary/30 border border-white/5 p-6 md:p-8 lg:p-10 flex flex-col justify-between hover:border-accent/30 transition-all duration-500 overflow-hidden flex-1 min-w-[280px] max-w-[380px] ${item.featured ? 'lg:-translate-y-6 bg-secondary/50 border-accent/20' : ''}`}
             >
               {/* Background Glow */}
               <div
@@ -51,10 +51,12 @@ const FilmVariants = () => {
               />
 
               <div>
-                {/* Thickness Badge */}
-                <div className="inline-block px-3 py-1.5 bg-accent/10 border border-accent/20 text-accent font-black text-base md:text-xl italic mb-5 md:mb-8">
-                  {item.thickness}
-                </div>
+                {/* Thickness Badge - Hidden for Colour PPF as per request */}
+                {item.slug !== 'colour-ppf' && (
+                  <div className="inline-block px-3 py-1.5 bg-accent/10 border border-accent/20 text-accent font-black text-base md:text-xl italic mb-5 md:mb-8">
+                    {item.thickness}
+                  </div>
+                )}
 
                 <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight mb-2 md:mb-3">{item.name}</h3>
                 <p className="text-[10px] font-bold uppercase tracking-widest mb-1 md:mb-2 text-accent">{item.warranty} Warranty</p>
@@ -74,7 +76,7 @@ const FilmVariants = () => {
               {/* Actions */}
               <div className="space-y-3 mt-auto">
                 <Link
-                  to={`/film-variant/${item.slug}`}
+                  to={item.slug === 'colour-ppf' ? '/colour-ppf' : `/film-variant/${item.slug}`}
                   className="flex items-center justify-center gap-2 w-full py-3 text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-accent transition-colors border border-white/5 hover:border-accent/20 rounded-sm"
                 >
                   View Details <ArrowRight size={12} />

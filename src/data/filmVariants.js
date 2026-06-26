@@ -67,5 +67,22 @@ export const filmVariants = [
       adhesion: "2500 N/m",
       warranty: "10 Year Global Limited"
     }
+  },
+  {
+    id: "colour-ppf",
+    slug: "colour-ppf",
+    name: "Colour PPF",
+    thickness: "8.0 mil",
+    warranty: "7 Years",
+    desc: "Transform your vehicle's aesthetic while providing top-tier protection. Available in various dynamic colors with self-healing tech.",
+    color: "rgba(255,105,180,0.3)",
+    features: ["Vibrant Custom Colors", "Self-Healing Surface", "UV Fade Resistance", "Scratch Protection"],
+    detailedSpecs: {
+      thickness: "8.0 mil (± 0.2 mil)",
+      gloss: "90 GU (varies by finish)",
+      stretch: "300%",
+      adhesion: "1900 N/m",
+      warranty: "7 Year Global Limited"
+    }
   }
 ];
