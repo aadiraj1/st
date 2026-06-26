@@ -438,14 +438,17 @@ const ColourPPF = () => {
                 disabled={isLoading}
                 className={`relative w-14 h-14 md:w-16 md:h-16 rounded-xl border flex-shrink-0 transition-all duration-300 ${
                   idx === activeIndex 
-                    ? 'border-accent scale-110 shadow-[0_0_20px_rgba(0,174,239,0.4)] z-10' 
-                    : 'border-white/10 hover:border-white/30 opacity-40 hover:opacity-100'
+                    ? 'border-white scale-110 z-10' 
+                    : 'border-white/20 hover:border-white/50'
                 }`}
-                style={{ backgroundColor: palette.color }}
+                style={{ 
+                  backgroundColor: palette.color,
+                  boxShadow: idx === activeIndex ? `0 0 25px ${palette.color}, 0 0 50px ${palette.color}80` : 'none'
+                }}
                 title={palette.name}
               >
                 {idx === activeIndex && (
-                  <div className="absolute inset-0 border-2 border-accent rounded-xl animate-pulse" />
+                  <div className="absolute inset-0 border-2 border-white/30 rounded-xl animate-pulse" />
                 )}
               </button>
             ))}
