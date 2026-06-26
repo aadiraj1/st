@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React, { useRef, useState, useEffect } from 'react';
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import { ChevronLeft, ChevronRight, ShieldCheck, Droplets, Sun, Layers, ArrowRight } from 'lucide-react';
 
@@ -268,16 +268,23 @@ const ColourPPF = () => {
   const scrollRef = useRef(null);
   const navigate = useNavigate();
 
-  const scrollLeft = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -300, behavior: 'smooth' });
-    }
-  };
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const scrollRight = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 300, behavior: 'smooth' });
-    }
+  const navigateToPalette = (newIndex) => {
+    if (isLoading || newIndex === activeIndex) return;
+    
+    let safeIndex = newIndex;
+    if (newIndex < 0) safeIndex = colorPalettes.length - 1;
+    if (newIndex >= colorPalettes.length) safeIndex = 0;
+
+    setIsLoading(true);
+
+    // Simulate network delay
+    setTimeout(() => {
+      setActiveIndex(safeIndex);
+      setIsLoading(false);
+    }, 800); 
   };
 
   const handleOrder = () => {
@@ -307,111 +314,141 @@ const ColourPPF = () => {
 
       {/* Interactive Palettes */}
       <section className="mb-24 relative">
-        <div className="container mx-auto px-4 md:px-6 mb-8 flex justify-between items-end">
-          <div>
-            <h3 className="text-2xl md:text-4xl font-black uppercase tracking-tight">Dynamic Palettes</h3>
-            <p className="text-accent text-[10px] font-black uppercase tracking-widest mt-2">Find your perfect match</p>
-          </div>
-          <div className="flex gap-2 hidden md:flex">
-            <button onClick={scrollLeft} className="p-3 border border-white/10 hover:border-accent hover:text-accent transition-colors rounded-full bg-secondary/50">
-              <ChevronLeft size={20} />
-            </button>
-            <button onClick={scrollRight} className="p-3 border border-white/10 hover:border-accent hover:text-accent transition-colors rounded-full bg-secondary/50">
-              <ChevronRight size={20} />
-            </button>
-          </div>
+        <div className="container mx-auto px-4 md:px-6 mb-8 text-center md:text-left">
+          <h3 className="text-2xl md:text-4xl font-black uppercase tracking-tight">Dynamic Palettes</h3>
+          <p className="text-accent text-[10px] font-black uppercase tracking-widest mt-2">Find your perfect match</p>
         </div>
 
-        {/* Mobile Swipe Container */}
-        <div className="relative w-full">
-          {/* Fading Edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-8 md:w-24 bg-gradient-to-r from-primary to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-8 md:w-24 bg-gradient-to-l from-primary to-transparent z-10 pointer-events-none" />
-
-          <div
-            ref={scrollRef}
-            className="flex overflow-x-auto snap-x snap-mandatory gap-6 px-4 md:px-24 pb-8 pt-4 hide-scrollbar cursor-grab active:cursor-grabbing"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        <div className="container mx-auto px-4 md:px-6">
+          {/* Main Viewer Area */}
+          <div 
+            className="relative w-full max-w-6xl mx-auto h-[650px] md:h-[500px] rounded-[30px] border border-white/10 bg-secondary/30 overflow-hidden"
+            onTouchStart={(e) => {
+               const touch = e.touches[0];
+               window.touchStartX = touch.clientX;
+            }}
+            onTouchEnd={(e) => {
+               const touch = e.changedTouches[0];
+               const diffX = window.touchStartX - touch.clientX;
+               if (diffX > 50) navigateToPalette(activeIndex + 1);
+               else if (diffX < -50) navigateToPalette(activeIndex - 1);
+            }}
           >
-            {colorPalettes.map((palette, index) => (
-              <div
-                key={palette.id}
-                className="snap-center shrink-0 w-[85vw] md:w-[400px] bg-secondary/30 border border-white/5 rounded-xl overflow-hidden group hover:border-accent/30 transition-all duration-500 relative"
+            
+            {/* The Palettes */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeIndex}
+                initial={{ opacity: 0, scale: 0.98 }}
+                animate={{ opacity: isLoading ? 0.3 : 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 1.02 }}
+                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                className="absolute inset-0 flex flex-col md:flex-row w-full h-full"
               >
-                {/* Skeleton Loading Background */}
-                <div className="absolute inset-0 bg-secondary/50 animate-pulse -z-10 flex flex-col">
-                  <div className="h-48 md:h-64 bg-white/5 w-full"></div>
-                  <div className="p-6 md:p-8 space-y-4 flex-1">
-                    <div className="h-6 bg-white/10 rounded w-1/2"></div>
-                    <div className="h-4 bg-white/5 rounded w-full"></div>
-                    <div className="h-4 bg-white/5 rounded w-5/6"></div>
-                    <div className="h-20 bg-white/5 rounded w-full mt-6"></div>
-                    <div className="h-16 bg-white/5 rounded w-full"></div>
-                  </div>
+                {/* Color Area */}
+                <div 
+                  className="w-full md:w-1/2 h-[45%] md:h-full relative flex items-center justify-center overflow-hidden"
+                  style={{ backgroundColor: colorPalettes[activeIndex].color }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-50 mix-blend-overlay" />
+                  <div className="absolute inset-0 shadow-[inset_0_-20px_50px_rgba(0,0,0,0.5)]" />
+                  
+                  {colorPalettes[activeIndex].finish.includes('Gloss') && (
+                    <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/20 blur-2xl rounded-full" />
+                  )}
+                  
+                  <span className="relative z-10 text-white/90 font-black uppercase tracking-[0.3em] text-xs mix-blend-difference">
+                    {colorPalettes[activeIndex].finish}
+                  </span>
                 </div>
 
-                {/* Actual Content - Fades in when scrolled into view */}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true, margin: "50px" }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
-                  className="h-full w-full bg-secondary/30"
-                >
-                  {/* Color Display Area */}
-                  <div 
-                    className="h-48 md:h-64 w-full relative flex items-center justify-center overflow-hidden"
-                    style={{ backgroundColor: palette.color }}
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-50 mix-blend-overlay" />
-                    <div className="absolute inset-0 shadow-[inset_0_-20px_50px_rgba(0,0,0,0.5)]" />
+                {/* Info Area */}
+                <div className="w-full md:w-1/2 h-[55%] md:h-full p-6 md:p-12 flex flex-col justify-center bg-secondary/50 backdrop-blur-md">
+                  <h4 className="text-3xl md:text-5xl font-black uppercase tracking-tight mb-4 text-white">
+                    {colorPalettes[activeIndex].name}
+                  </h4>
+                  <p className="text-gray-400 text-sm leading-relaxed mb-6 md:mb-8">
+                    {colorPalettes[activeIndex].description}
+                  </p>
+                  
+                  <div className="space-y-4">
+                    <div className="bg-primary/50 p-4 border border-white/5 rounded-xl">
+                      <p className="text-[10px] font-black uppercase tracking-widest text-accent mb-2">Best Suited For</p>
+                      <p className="text-sm font-bold text-white mb-1">{colorPalettes[activeIndex].bestFor}</p>
+                      <p className="text-xs text-gray-400">{colorPalettes[activeIndex].vehicles}</p>
+                    </div>
                     
-                    {/* Subtle reflections */}
-                    {palette.finish.includes('Gloss') && (
-                      <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/20 blur-2xl rounded-full" />
-                    )}
-                    
-                    <span className="relative z-10 text-white/90 font-black uppercase tracking-[0.3em] text-xs mix-blend-difference">
-                      {palette.finish}
-                    </span>
-                  </div>
-
-                  {/* Info Area */}
-                  <div className="p-6 md:p-8">
-                    <h4 className="text-2xl font-black uppercase tracking-tight mb-2 group-hover:text-accent transition-colors">{palette.name}</h4>
-                    <p className="text-gray-400 text-xs leading-relaxed mb-6 h-12">{palette.description}</p>
-                    
-                    <div className="space-y-4">
-                      <div className="bg-primary/50 p-4 border border-white/5 rounded-lg">
-                        <p className="text-[9px] font-black uppercase tracking-widest text-accent mb-1">Best Suited For</p>
-                        <p className="text-sm font-bold">{palette.bestFor}</p>
-                        <p className="text-xs text-gray-400 mt-1">{palette.vehicles}</p>
-                      </div>
-                      
-                      <div className="bg-primary/50 p-4 border border-white/5 rounded-lg">
-                        <p className="text-[9px] font-black uppercase tracking-widest text-accent mb-1">Vibe & Personality</p>
-                        <p className="text-xs text-gray-300 italic">"{palette.personality}"</p>
-                      </div>
+                    <div className="bg-primary/50 p-4 border border-white/5 rounded-xl hidden md:block">
+                      <p className="text-[10px] font-black uppercase tracking-widest text-accent mb-2">Vibe & Personality</p>
+                      <p className="text-sm text-gray-300 italic">"{colorPalettes[activeIndex].personality}"</p>
                     </div>
                   </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Global Loading Overlay */}
+            <AnimatePresence>
+              {isLoading && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="absolute inset-0 z-50 pointer-events-none flex items-center justify-center bg-black/20 backdrop-blur-[2px]"
+                >
+                  <div className="relative flex flex-col items-center justify-center">
+                    <div className="w-16 h-16 border-4 border-white/10 border-t-accent rounded-full animate-spin shadow-[0_0_30px_rgba(0,174,239,0.5)]" />
+                    <motion.div 
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="absolute -bottom-10 whitespace-nowrap text-[10px] font-black uppercase tracking-widest text-accent bg-black/60 px-4 py-1.5 rounded-full backdrop-blur-md shadow-lg"
+                    >
+                      Loading Assets...
+                    </motion.div>
+                  </div>
                 </motion.div>
-              </div>
-            ))}
+              )}
+            </AnimatePresence>
+            
+            {/* Navigation Overlays */}
+            <div className="absolute inset-0 z-40 pointer-events-none flex items-center justify-between px-4">
+              <button 
+                onClick={() => navigateToPalette(activeIndex - 1)}
+                disabled={isLoading}
+                className="pointer-events-auto w-10 h-10 md:w-14 md:h-14 bg-black/40 hover:bg-accent hover:text-black border border-white/10 rounded-full flex items-center justify-center backdrop-blur-md transition-all disabled:opacity-50 disabled:cursor-not-allowed text-white shadow-lg"
+              >
+                <ChevronLeft size={24} />
+              </button>
+              <button 
+                onClick={() => navigateToPalette(activeIndex + 1)}
+                disabled={isLoading}
+                className="pointer-events-auto w-10 h-10 md:w-14 md:h-14 bg-black/40 hover:bg-accent hover:text-black border border-white/10 rounded-full flex items-center justify-center backdrop-blur-md transition-all disabled:opacity-50 disabled:cursor-not-allowed text-white shadow-lg"
+              >
+                <ChevronRight size={24} />
+              </button>
+            </div>
           </div>
-          
-          {/* Mobile Scroll Indicator */}
-          <div className="flex justify-center md:hidden mt-4 mb-2">
-            <motion.div 
-              animate={{ x: [-5, 5, -5] }}
-              transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-              className="flex items-center gap-2 px-4 py-2 bg-secondary/50 rounded-full border border-white/10 shadow-lg"
-            >
-               <ChevronLeft size={14} className="text-accent" />
-               <span className="text-[10px] text-white font-bold uppercase tracking-widest">
-                 Swipe to explore
-               </span>
-               <ChevronRight size={14} className="text-accent" />
-            </motion.div>
+
+          {/* Thumbnail strip */}
+          <div className="flex overflow-x-auto gap-3 mt-8 pb-4 hide-scrollbar justify-start md:justify-center cursor-grab active:cursor-grabbing px-4" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+            {colorPalettes.map((palette, idx) => (
+              <button
+                key={palette.id}
+                onClick={() => navigateToPalette(idx)}
+                disabled={isLoading}
+                className={`relative w-14 h-14 md:w-16 md:h-16 rounded-xl border flex-shrink-0 transition-all duration-300 ${
+                  idx === activeIndex 
+                    ? 'border-accent scale-110 shadow-[0_0_20px_rgba(0,174,239,0.4)] z-10' 
+                    : 'border-white/10 hover:border-white/30 opacity-40 hover:opacity-100'
+                }`}
+                style={{ backgroundColor: palette.color }}
+                title={palette.name}
+              >
+                {idx === activeIndex && (
+                  <div className="absolute inset-0 border-2 border-accent rounded-xl animate-pulse" />
+                )}
+              </button>
+            ))}
           </div>
         </div>
       </section>
