@@ -334,59 +334,84 @@ const ColourPPF = () => {
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {colorPalettes.map((palette, index) => (
-              <motion.div
+              <div
                 key={palette.id}
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="snap-center shrink-0 w-[85vw] md:w-[400px] bg-secondary/30 border border-white/5 rounded-xl overflow-hidden group hover:border-accent/30 transition-all duration-500"
+                className="snap-center shrink-0 w-[85vw] md:w-[400px] bg-secondary/30 border border-white/5 rounded-xl overflow-hidden group hover:border-accent/30 transition-all duration-500 relative"
               >
-                {/* Color Display Area */}
-                <div 
-                  className="h-48 md:h-64 w-full relative flex items-center justify-center overflow-hidden"
-                  style={{ backgroundColor: palette.color }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-50 mix-blend-overlay" />
-                  <div className="absolute inset-0 shadow-[inset_0_-20px_50px_rgba(0,0,0,0.5)]" />
-                  
-                  {/* Subtle reflections */}
-                  {palette.finish.includes('Gloss') && (
-                    <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/20 blur-2xl rounded-full" />
-                  )}
-                  
-                  <span className="relative z-10 text-white/90 font-black uppercase tracking-[0.3em] text-xs mix-blend-difference">
-                    {palette.finish}
-                  </span>
-                </div>
-
-                {/* Info Area */}
-                <div className="p-6 md:p-8">
-                  <h4 className="text-2xl font-black uppercase tracking-tight mb-2 group-hover:text-accent transition-colors">{palette.name}</h4>
-                  <p className="text-gray-400 text-xs leading-relaxed mb-6 h-12">{palette.description}</p>
-                  
-                  <div className="space-y-4">
-                    <div className="bg-primary/50 p-4 border border-white/5 rounded-lg">
-                      <p className="text-[9px] font-black uppercase tracking-widest text-accent mb-1">Best Suited For</p>
-                      <p className="text-sm font-bold">{palette.bestFor}</p>
-                      <p className="text-xs text-gray-400 mt-1">{palette.vehicles}</p>
-                    </div>
-                    
-                    <div className="bg-primary/50 p-4 border border-white/5 rounded-lg">
-                      <p className="text-[9px] font-black uppercase tracking-widest text-accent mb-1">Vibe & Personality</p>
-                      <p className="text-xs text-gray-300 italic">"{palette.personality}"</p>
-                    </div>
+                {/* Skeleton Loading Background */}
+                <div className="absolute inset-0 bg-secondary/50 animate-pulse -z-10 flex flex-col">
+                  <div className="h-48 md:h-64 bg-white/5 w-full"></div>
+                  <div className="p-6 md:p-8 space-y-4 flex-1">
+                    <div className="h-6 bg-white/10 rounded w-1/2"></div>
+                    <div className="h-4 bg-white/5 rounded w-full"></div>
+                    <div className="h-4 bg-white/5 rounded w-5/6"></div>
+                    <div className="h-20 bg-white/5 rounded w-full mt-6"></div>
+                    <div className="h-16 bg-white/5 rounded w-full"></div>
                   </div>
                 </div>
-              </motion.div>
+
+                {/* Actual Content - Fades in when scrolled into view */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true, margin: "50px" }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                  className="h-full w-full bg-secondary/30"
+                >
+                  {/* Color Display Area */}
+                  <div 
+                    className="h-48 md:h-64 w-full relative flex items-center justify-center overflow-hidden"
+                    style={{ backgroundColor: palette.color }}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-50 mix-blend-overlay" />
+                    <div className="absolute inset-0 shadow-[inset_0_-20px_50px_rgba(0,0,0,0.5)]" />
+                    
+                    {/* Subtle reflections */}
+                    {palette.finish.includes('Gloss') && (
+                      <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/20 blur-2xl rounded-full" />
+                    )}
+                    
+                    <span className="relative z-10 text-white/90 font-black uppercase tracking-[0.3em] text-xs mix-blend-difference">
+                      {palette.finish}
+                    </span>
+                  </div>
+
+                  {/* Info Area */}
+                  <div className="p-6 md:p-8">
+                    <h4 className="text-2xl font-black uppercase tracking-tight mb-2 group-hover:text-accent transition-colors">{palette.name}</h4>
+                    <p className="text-gray-400 text-xs leading-relaxed mb-6 h-12">{palette.description}</p>
+                    
+                    <div className="space-y-4">
+                      <div className="bg-primary/50 p-4 border border-white/5 rounded-lg">
+                        <p className="text-[9px] font-black uppercase tracking-widest text-accent mb-1">Best Suited For</p>
+                        <p className="text-sm font-bold">{palette.bestFor}</p>
+                        <p className="text-xs text-gray-400 mt-1">{palette.vehicles}</p>
+                      </div>
+                      
+                      <div className="bg-primary/50 p-4 border border-white/5 rounded-lg">
+                        <p className="text-[9px] font-black uppercase tracking-widest text-accent mb-1">Vibe & Personality</p>
+                        <p className="text-xs text-gray-300 italic">"{palette.personality}"</p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
             ))}
           </div>
           
           {/* Mobile Scroll Indicator */}
-          <div className="flex justify-center md:hidden gap-1 mt-2">
-             <span className="text-[10px] text-gray-500 uppercase tracking-widest flex items-center gap-2">
-               <ChevronLeft size={12} /> Swipe to explore <ChevronRight size={12} />
-             </span>
+          <div className="flex justify-center md:hidden mt-4 mb-2">
+            <motion.div 
+              animate={{ x: [-5, 5, -5] }}
+              transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+              className="flex items-center gap-2 px-4 py-2 bg-secondary/50 rounded-full border border-white/10 shadow-lg"
+            >
+               <ChevronLeft size={14} className="text-accent" />
+               <span className="text-[10px] text-white font-bold uppercase tracking-widest">
+                 Swipe to explore
+               </span>
+               <ChevronRight size={14} className="text-accent" />
+            </motion.div>
           </div>
         </div>
       </section>
