@@ -112,7 +112,7 @@ const WarrantyStudioDashboard = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
-          className="glass-effect p-8 md:p-12 rounded-[2rem] border border-white/5 relative overflow-hidden mb-12 shadow-2xl"
+          className="glass-effect p-6 md:p-12 rounded-[2rem] border border-white/5 relative overflow-hidden mb-12 shadow-2xl"
         >
           {/* Animated Background Element */}
           <div className="absolute -top-24 -right-24 w-64 h-64 bg-accent/20 blur-[100px] rounded-full" />
@@ -181,7 +181,7 @@ const WarrantyStudioDashboard = () => {
               className="space-y-8"
             >
               {/* Premium Success Card */}
-              <div className="bg-gradient-to-br from-[#00AEER]/10 via-black to-[#00AEER]/5 border border-accent/40 rounded-[2.5rem] p-10 md:p-16 relative overflow-hidden shadow-[0_0_80px_rgba(0,174,239,0.15)]">
+              <div className="bg-gradient-to-br from-[#00AEER]/10 via-black to-[#00AEER]/5 border border-accent/40 rounded-[2.5rem] p-6 sm:p-10 md:p-16 relative overflow-hidden shadow-[0_0_80px_rgba(0,174,239,0.15)]">
                 {/* Glowing Orbs */}
                 <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 blur-[120px] rounded-full pointer-events-none" />
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/10 blur-[100px] rounded-full pointer-events-none" />
@@ -192,7 +192,7 @@ const WarrantyStudioDashboard = () => {
 
                 <div className="relative z-10 text-center md:text-left">
                   <div className="flex flex-col md:flex-row items-center gap-8 mb-12 border-b border-white/10 pb-10">
-                    <div className="w-24 h-24 bg-accent rounded-[2rem] flex items-center justify-center text-black shadow-[0_0_60px_rgba(0,174,239,0.6)] rotate-3">
+                    <div className="w-20 h-20 md:w-24 md:h-24 shrink-0 bg-accent rounded-[2rem] flex items-center justify-center text-black shadow-[0_0_60px_rgba(0,174,239,0.6)] rotate-3">
                       <CheckCircle2 size={48} strokeWidth={2.5} className="-rotate-3" />
                     </div>
                     <div>
@@ -230,19 +230,19 @@ const WarrantyStudioDashboard = () => {
                       <div>
                         <h4 className="text-sm font-black uppercase tracking-widest text-white border-b border-white/10 pb-4 mb-6">Certificate Details</h4>
                         <div className="space-y-5">
-                          <div className="flex justify-between items-center border-b border-white/5 pb-3">
+                          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center items-start gap-2 border-b border-white/5 pb-3">
                             <span className="text-[10px] font-black uppercase text-gray-500">Serial ID</span>
-                            <span className="text-base font-black text-white tracking-widest bg-black/50 px-3 py-1 rounded-lg border border-white/5">{result.serial}</span>
+                            <span className="text-sm sm:text-base font-black text-white tracking-widest bg-black/50 px-3 py-1 rounded-lg border border-white/5 break-all">{result.serial}</span>
                           </div>
-                          <div className="flex justify-between items-center border-b border-white/5 pb-3">
+                          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center items-start gap-2 border-b border-white/5 pb-3">
                             <span className="text-[10px] font-black uppercase text-gray-500">Film Variant</span>
-                            <span className="text-sm font-black text-accent uppercase tracking-widest">{result.type}</span>
+                            <span className="text-xs sm:text-sm font-black text-accent uppercase tracking-widest">{result.type}</span>
                           </div>
-                          <div className="flex justify-between items-center border-b border-white/5 pb-3">
+                          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center items-start gap-2 border-b border-white/5 pb-3">
                             <span className="text-[10px] font-black uppercase text-gray-500">Installer</span>
-                            <span className="text-sm font-bold text-white uppercase tracking-tight">{user.studioName}</span>
+                            <span className="text-xs sm:text-sm font-bold text-white uppercase tracking-tight">{user.studioName}</span>
                           </div>
-                          <div className="flex justify-between items-center">
+                          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center items-start gap-2">
                             <span className="text-[10px] font-black uppercase text-gray-500">Status</span>
                             <span className="text-[10px] font-black uppercase tracking-widest bg-green-500 text-black px-3 py-1.5 rounded-md shadow-[0_0_15px_rgba(34,197,94,0.4)]">Active Warranty</span>
                           </div>
@@ -269,7 +269,7 @@ const WarrantyStudioDashboard = () => {
               key="invalid"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="bg-red-500/10 border border-red-500/20 rounded-3xl p-10 text-center relative overflow-hidden"
+              className="bg-red-500/10 border border-red-500/20 rounded-3xl p-6 md:p-10 text-center relative overflow-hidden"
             >
               <div className="absolute top-0 left-0 w-full h-1 bg-red-500" />
               <div className="w-20 h-20 bg-red-500/20 border border-red-500/50 rounded-full flex items-center justify-center mx-auto mb-6 text-red-500">
