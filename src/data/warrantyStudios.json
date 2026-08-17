@@ -1,0 +1,12 @@
+[
+  {
+    "username": "studio1",
+    "password": "password123",
+    "studioName": "Studio Name"
+  },
+  {
+    "username": "demo",
+    "password": "123",
+    "studioName": "Starkx Demo Studio"
+  }
+]

@@ -42,6 +42,8 @@ import WarrantyCheck from './pages/WarrantyCheck';
 import StudiosLogin from './pages/StudiosLogin';
 import StudiosDashboard from './pages/StudiosDashboard';
 import ColourPPF from './pages/ColourPPF';
+import WarrantyStudioLogin from './pages/WarrantyStudioLogin';
+import WarrantyStudioDashboard from './pages/WarrantyStudioDashboard';
 import Chatbot from './components/Chatbot';
 import Preloader from './components/Preloader';
 
@@ -145,6 +147,8 @@ function App() {
         <Route path="/studios-login" element={<StudiosLogin />} />
         <Route path="/studios-dashboard" element={<StudiosDashboard />} />
         <Route path="/colour-ppf" element={<ColourPPF />} />
+        <Route path="/warranty-studio-login" element={<WarrantyStudioLogin />} />
+        <Route path="/warranty-studio-dashboard" element={<WarrantyStudioDashboard />} />
 
 
 

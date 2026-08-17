@@ -31,7 +31,7 @@ const Navbar = () => {
     { name: 'Shop', href: '/shop' },
     { name: 'Find Installer', href: '/#dealer-map' },
     { name: 'Articles', href: '/blog' },
-    { name: 'Warranty Check', href: '/warranty-check' },
+    { name: 'Warranty Check', href: '/warranty-studio-login' },
   ];
 
   const handleNavClick = (href) => {
