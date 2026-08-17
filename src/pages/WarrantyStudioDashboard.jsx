@@ -34,12 +34,15 @@ const WarrantyStudioDashboard = () => {
 
     // Simulate a "premium" scanning effect
     setTimeout(() => {
-      const isValid = sequence.includes(serial.trim());
+      const isSerialValid = sequence.includes(serial.trim());
+      const lowerType = type.toLowerCase();
       
-      if (isValid) {
+      const validTypes = ['master', 'elite', 'plus', 'nova'];
+      const isTypeValid = validTypes.some(validType => lowerType.includes(validType));
+      
+      if (isSerialValid && isTypeValid) {
         // Calculate years based on type
         let years = "5"; // Default
-        const lowerType = type.toLowerCase();
         
         if (lowerType.includes('master')) years = "10";
         else if (lowerType.includes('elite')) years = "7";
@@ -50,7 +53,7 @@ const WarrantyStudioDashboard = () => {
           status: 'valid',
           years: years,
           serial: serial,
-          type: type || 'Standard Protection'
+          type: type
         });
       } else {
         setResult({ status: 'invalid' });
