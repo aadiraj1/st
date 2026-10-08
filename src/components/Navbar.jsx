@@ -44,11 +44,14 @@ const Navbar = () => {
       if (location.pathname === '/') {
         e.preventDefault();
         window.history.pushState(null, '', href);
-        scrollToHashElement(hash);
+        // Add a 200ms delay to allow mobile drawer animation to finish collapsing
+        scrollToHashElement(hash, 200);
       } else {
         // Navigating from another page to homepage with hash
         e.preventDefault();
         navigate(href);
+        // In case route change takes a moment, trigger hash scroll with delay
+        scrollToHashElement(hash, 250);
       }
     }
   };

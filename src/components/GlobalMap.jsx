@@ -196,7 +196,7 @@ const GlobalMap = () => {
             </motion.h2>
 
             {/* Search Bar */}
-            <div className="relative max-w-lg">
+            <div id="dealer-search-target" className="relative max-w-lg scroll-mt-24 md:scroll-mt-28">
               <div className="relative">
                 <Search
                   className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none"
