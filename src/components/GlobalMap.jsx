@@ -29,6 +29,26 @@ const locations = [
   { top: "25%", left: "62%", name: "PPF Solutions UAB", location: "Lithuania", country: "Lithuania" },
   { top: "26%", left: "62%", name: "PPF Stamp", location: "Lithuania", country: "Lithuania" },
   { top: "48%", left: "65%", name: "SparkPro Islamabad", location: "Islamabad", country: "Pakistan" },
+  { 
+    top: "50%", 
+    left: "65.5%", 
+    name: "Jetour Quaideen", 
+    location: "Karachi", 
+    country: "Pakistan",
+    address: "241-A, P.E.C.H.S. Block-2, Main Shahrah-e-Quaideen, Karachi",
+    contact: "0333-6538687 / 0326-5550770",
+    email: "info@jetourquaideen.com"
+  },
+  { 
+    top: "51%", 
+    left: "66%", 
+    name: "Honda Shahrah-e-Faisal", 
+    location: "Karachi", 
+    country: "Pakistan",
+    address: "13th Bangalore Town, Main Shahrah-e-Faisal, Karachi",
+    contact: "111-46632-1",
+    email: "sales@honda-sf.com.pk"
+  },
 ];
 
 const GlobalMap = () => {
@@ -353,18 +373,27 @@ const GlobalMap = () => {
 
                     {/* Tooltip — always visible on mobile for selected, hover on desktop */}
                     <div className={`absolute left-5 top-1/2 -translate-y-1/2 z-30 pointer-events-none
-                      bg-primary/95 backdrop-blur-xl border rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.5)] min-w-[110px] px-3 py-2
+                      bg-primary/95 backdrop-blur-xl border rounded-lg shadow-[0_8px_30px_rgba(0,0,0,0.5)] min-w-[160px] max-w-[240px] px-3 py-2.5
                       transition-all duration-200
                       ${isSelected
                         ? 'opacity-100 visible border-accent/50'
                         : 'opacity-0 invisible group-hover:opacity-100 group-hover:visible border-white/10'
                       }`}
                     >
-                      <span className="block text-[9px] md:text-[10px] font-black uppercase tracking-wider text-white leading-tight mb-0.5">{loc.name}</span>
-                      <div className="flex items-center gap-1.5">
+                      <span className="block text-[10px] md:text-[11px] font-black uppercase tracking-wider text-white leading-tight mb-1">{loc.name}</span>
+                      <div className="flex items-center gap-1.5 mb-1">
                         <div className="w-1 h-1 bg-accent rounded-full animate-pulse" />
-                        <span className="text-[8px] font-bold text-accent uppercase tracking-widest">{loc.location}</span>
+                        <span className="text-[8px] font-bold text-accent uppercase tracking-widest">{loc.location} · {loc.country}</span>
                       </div>
+                      {loc.address && (
+                        <p className="text-[8px] font-normal text-gray-300 mt-1 border-t border-white/10 pt-1 leading-normal">{loc.address}</p>
+                      )}
+                      {loc.contact && (
+                        <p className="text-[8px] font-semibold text-accent/90 mt-0.5">📞 {loc.contact}</p>
+                      )}
+                      {loc.email && (
+                        <p className="text-[8px] font-normal text-gray-400 truncate">✉️ {loc.email}</p>
+                      )}
                     </div>
                   </motion.div>
                 );
@@ -372,18 +401,18 @@ const GlobalMap = () => {
             </AnimatePresence>
           </motion.div>
 
-          {/* ── MOBILE: Selected Studio Overlay Card ── */}
+          {/* ── MOBILE & DESKTOP: Selected Studio Overlay Card ── */}
           <AnimatePresence>
-            {isMobile && selectedLoc && (
+            {selectedLoc && (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
-                className="absolute bottom-4 left-4 right-4 z-50 bg-primary/95 backdrop-blur-xl border border-accent/30 rounded-2xl p-4 shadow-[0_-10px_40px_rgba(0,0,0,0.5)]"
+                className="absolute bottom-4 left-4 right-4 md:left-auto md:right-4 md:w-96 z-50 bg-primary/95 backdrop-blur-xl border border-accent/30 rounded-2xl p-4 shadow-[0_-10px_40px_rgba(0,0,0,0.5)]"
               >
                 <button
                   onClick={() => setSelectedLoc(null)}
-                  className="absolute top-3 right-3 w-6 h-6 bg-white/10 rounded-full flex items-center justify-center text-gray-400 hover:text-white"
+                  className="absolute top-3 right-3 w-6 h-6 bg-white/10 rounded-full flex items-center justify-center text-gray-400 hover:text-white transition-colors"
                 >
                   <X size={12} />
                 </button>
@@ -391,12 +420,21 @@ const GlobalMap = () => {
                   <div className="w-10 h-10 bg-accent/10 border border-accent/30 rounded-xl flex items-center justify-center flex-shrink-0">
                     <MapPinIcon size={18} className="text-accent" />
                   </div>
-                  <div>
-                    <p className="text-[9px] font-black uppercase tracking-widest text-accent mb-0.5">Verified Installer</p>
+                  <div className="pr-6">
+                    <p className="text-[9px] font-black uppercase tracking-widest text-accent mb-0.5">Verified Studio</p>
                     <p className="text-sm font-black uppercase tracking-tight text-white">{selectedLoc.name}</p>
                     <p className="text-[10px] text-gray-400 font-bold mt-0.5">{selectedLoc.location} · {selectedLoc.country}</p>
                   </div>
                 </div>
+
+                {selectedLoc.address && (
+                  <div className="mt-3 pt-3 border-t border-white/10 text-xs text-gray-300 space-y-1">
+                    <p className="text-[10px] text-gray-300 leading-normal"><strong className="text-white">Address:</strong> {selectedLoc.address}</p>
+                    {selectedLoc.contact && <p className="text-[10px] text-accent"><strong className="text-white">Contact:</strong> {selectedLoc.contact}</p>}
+                    {selectedLoc.email && <p className="text-[10px] text-gray-300"><strong className="text-white">Email:</strong> {selectedLoc.email}</p>}
+                  </div>
+                )}
+
                 <div className="flex items-center gap-2 mt-3 pt-3 border-t border-white/10">
                   <div className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
                   <p className="text-[9px] text-gray-500 uppercase tracking-widest font-bold">Active in Starkx.Pro Network</p>

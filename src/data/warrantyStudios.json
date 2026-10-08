@@ -8,5 +8,21 @@
     "username": "demo",
     "password": "123",
     "studioName": "Starkx Demo Studio"
+  },
+  {
+    "username": "jetour_quaideen",
+    "password": "JtQ#8291",
+    "studioName": "Jetour Quaideen",
+    "address": "241-A, P.E.C.H.S. Block-2, Main Shahrah-e-Quaideen, Karachi",
+    "contact": "0333-6538687 & 0326-5550770",
+    "email": "info@jetourquaideen.com / jetourquaideen@gmail.com"
+  },
+  {
+    "username": "honda_sf",
+    "password": "Hsf$7149",
+    "studioName": "Honda Shahrah-e-Faisal",
+    "address": "13th Bangalore Town, Main Shahrah-e-Faisal, Karachi",
+    "contact": "111-46632-1",
+    "email": "sales@honda-sf.com.pk"
   }
 ]
