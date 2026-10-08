@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Phone, MapPin, Menu, X, ShoppingCart, Trash2, ChevronRight } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import { scrollToHashElement } from './ScrollToTop';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -10,6 +11,7 @@ const Navbar = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const { cartItems, removeFromCart, cartTotal } = useCart();
   const navigate = useNavigate();
+  const location = useLocation();
 
   React.useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -34,9 +36,23 @@ const Navbar = () => {
     { name: 'Warranty Check', href: '/warranty-studio-login' },
   ];
 
-  const handleNavClick = (href) => {
+  const handleNavClick = (e, href) => {
     setMobileMenuOpen(false);
+
+    if (href.startsWith('/#')) {
+      const hash = href.substring(1); // e.g. '#dealer-map'
+      if (location.pathname === '/') {
+        e.preventDefault();
+        window.history.pushState(null, '', href);
+        scrollToHashElement(hash);
+      } else {
+        // Navigating from another page to homepage with hash
+        e.preventDefault();
+        navigate(href);
+      }
+    }
   };
+
 
   return (
     <>
@@ -53,7 +69,7 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.href}
-                onClick={() => handleNavClick(link.href)}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className="text-xs font-black text-accent hover:text-white transition-colors uppercase tracking-[0.2em] relative group"
               >
                 <motion.span
@@ -134,7 +150,7 @@ const Navbar = () => {
                   >
                     <Link
                       to={link.href}
-                      onClick={() => handleNavClick(link.href)}
+                      onClick={(e) => handleNavClick(e, link.href)}
                       className="flex items-center justify-between w-full py-4 border-b border-accent/10 text-lg font-black uppercase tracking-tight text-accent hover:text-white transition-colors"
                     >
                       {link.name}

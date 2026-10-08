@@ -1,6 +1,7 @@
 import React, { useState, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, Shield, Zap, Star } from 'lucide-react';
+import { scrollToHashElement } from './ScrollToTop';
 
 const packages = [
   {
@@ -274,10 +275,7 @@ const VehicleVisualizer = () => {
 
                 {/* CTA Button */}
                 <button
-                  onClick={() => {
-                    const mapSection = document.getElementById('dealer-map');
-                    if (mapSection) mapSection.scrollIntoView({ behavior: 'smooth' });
-                  }}
+                  onClick={() => scrollToHashElement('#dealer-map')}
                   className="w-full bg-accent text-black py-4 font-black text-[11px] uppercase tracking-[0.25em] hover:bg-white transition-all duration-300 rounded-none flex items-center justify-center gap-3 shadow-[0_10px_30px_rgba(0,174,239,0.3)]"
                 >
                   Find Installer for {activePkg.name}

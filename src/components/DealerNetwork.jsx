@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Users, Award, BookOpen } from 'lucide-react';
 import PartnerModal from './PartnerModal';
+import { scrollToHashElement } from './ScrollToTop';
 
 const benefits = [
   {
@@ -30,8 +31,7 @@ const DealerNetwork = () => {
   const [modalMode, setModalMode] = useState(null); // 'dealer' | 'partner' | null
 
   const scrollToMap = () => {
-    const el = document.getElementById('dealer-map');
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    scrollToHashElement('#dealer-map');
   };
 
   return (
