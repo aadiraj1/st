@@ -222,7 +222,7 @@
 //                 <input
 //                   type="text"
 //                   required
-//                   placeholder="e.g. 1000 1000 1000 1033"
+//                   placeholder="e.g. 2000 2000 2000 2044"
 //                   value={serial}
 //                   onChange={handleInputChange}
 //                   className="w-full bg-white/5 border border-white/15 px-14 py-4 md:py-5 rounded-2xl focus:outline-none focus:border-accent focus:bg-white/10 focus:ring-2 focus:ring-accent/20 transition-all font-mono font-bold text-lg md:text-xl tracking-wider placeholder:text-gray-600 text-white"
@@ -256,7 +256,7 @@
 //               <button
 //                 type="button"
 //                 onClick={() => {
-//                   setSerial('1000 1000 1000 1033');
+//                   setSerial('2000 2000 2000 2044');
 //                   setTimeout(() => {
 //                     const match = allWarranties.find((w) => normalize(w.warrantyNumber) === '1000100010001033');
 //                     if (match) {
@@ -267,7 +267,7 @@
 //                 }}
 //                 className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/5 hover:bg-accent/20 border border-white/10 hover:border-accent/40 rounded-lg text-accent font-mono transition-colors cursor-pointer"
 //               >
-//                 <span>1000 1000 1000 1033</span>
+//                 <span>2000 2000 2000 2044</span>
 //                 <span className="text-[10px] bg-accent/30 text-white px-1.5 py-0.5 rounded">Active</span>
 //               </button>
 //             </div>
@@ -789,7 +789,7 @@ const UserWarrantyCheck = () => {
                 <input
                   type="text"
                   required
-                  placeholder="e.g. 1000 1000 1000 1033"
+                  placeholder="e.g. 2000 2000 2000 2044"
                   value={serial}
                   onChange={handleInputChange}
                   className="w-full bg-white/5 border border-white/15 px-14 py-4 md:py-5 rounded-2xl focus:outline-none focus:border-accent focus:bg-white/10 focus:ring-2 focus:ring-accent/20 transition-all font-mono font-bold text-lg md:text-xl tracking-wider placeholder:text-gray-600 text-white"
@@ -834,7 +834,7 @@ const UserWarrantyCheck = () => {
                 }}
                 className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/5 hover:bg-accent/20 border border-white/10 hover:border-accent/40 rounded-lg text-accent font-mono transition-colors cursor-pointer"
               >
-                <span>1000 1000 1000 1033</span>
+                <span>2000 2000 2000 2044</span>
                 <span className="text-[10px] bg-accent/30 text-white px-1.5 py-0.5 rounded">Active</span>
               </button>
             </div>
