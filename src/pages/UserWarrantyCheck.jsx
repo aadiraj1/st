@@ -483,7 +483,7 @@ const UserWarrantyCheck = () => {
                       <div className="flex justify-between text-sm">
                         <span className="text-gray-400">Warranty Term:</span>
                         <span className="font-bold text-white print:text-black">
-                          {warrantyData.warrantyYears || 5} Years Official Guarantee
+                          {warrantyData.warrantyYears || 8} Years Official Guarantee
                         </span>
                       </div>
                     </div>
