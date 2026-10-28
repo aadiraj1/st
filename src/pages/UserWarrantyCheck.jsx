@@ -825,7 +825,7 @@ const UserWarrantyCheck = () => {
                 onClick={() => {
                   setSerial('2000 2000 2000 2044');
                   setTimeout(() => {
-                    const match = allWarranties.find((w) => normalize(w.warrantyNumber) === '1000100010001033');
+                    const match = allWarranties.find((w) => normalize(w.warrantyNumber) === '2000200020002044');
                     if (match) {
                       setWarrantyData(match);
                       setNotFound(false);
