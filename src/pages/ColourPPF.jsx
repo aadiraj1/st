@@ -260,7 +260,7 @@ const specs = [
   { label: 'Gloss Level', value: '90 GU (varies by finish)', icon: <Sun size={20} /> },
   { label: 'Elongation', value: '300%', icon: <ArrowRight size={20} /> },
   { label: 'Adhesion', value: '1900 N/m', icon: <ShieldCheck size={20} /> },
-  { label: 'Warranty', value: '7 Year Global Limited', icon: <ShieldCheck size={20} /> },
+  { label: 'Warranty', value: '8 yrs Global Limited', icon: <ShieldCheck size={20} /> },
   { label: 'Hydrophobic', value: 'Advanced Top-Coat', icon: <Droplets size={20} /> },
 ];
 

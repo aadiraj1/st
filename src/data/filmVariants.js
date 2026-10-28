@@ -13,7 +13,7 @@ export const filmVariants = [
       gloss: "85 GU (at 60°)",
       stretch: "250%",
       adhesion: "1500 N/m",
-      warranty: "3 Year Global Limited"
+      warranty: "8 yrs Global Limited"
     }
   },
   {
@@ -48,7 +48,7 @@ export const filmVariants = [
       gloss: "95 GU (at 60°)",
       stretch: "400%",
       adhesion: "2100 N/m",
-      warranty: "7 Year Global Limited"
+      warranty: "8 yrs Global Limited"
     }
   },
   {
@@ -65,7 +65,7 @@ export const filmVariants = [
       gloss: "98 GU (at 60°)",
       stretch: "450%",
       adhesion: "2500 N/m",
-      warranty: "10 Year Global Limited"
+      warranty: "8 yrs Global Limited"
     }
   },
   {
@@ -82,7 +82,7 @@ export const filmVariants = [
       gloss: "90 GU (varies by finish)",
       stretch: "300%",
       adhesion: "1900 N/m",
-      warranty: "7 Year Global Limited"
+      warranty: "8 yrs Global Limited"
     }
   }
 ];
