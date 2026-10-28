@@ -30,7 +30,7 @@ export const filmVariants = [
       gloss: "92 GU (at 60°)",
       stretch: "350%",
       adhesion: "1800 N/m",
-      warranty: "4 Year Global Limited"
+      warranty: "8 yrs Global Limited"
     }
   },
   {
