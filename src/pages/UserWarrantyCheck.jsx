@@ -823,7 +823,7 @@ const UserWarrantyCheck = () => {
               <button
                 type="button"
                 onClick={() => {
-                  setSerial('1000 1000 1000 1033');
+                  setSerial('2000 2000 2000 2044');
                   setTimeout(() => {
                     const match = allWarranties.find((w) => normalize(w.warrantyNumber) === '1000100010001033');
                     if (match) {
