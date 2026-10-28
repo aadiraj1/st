@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Lock, User, AlertCircle, ShieldCheck, ChevronRight, X, Mail, Phone, Fingerprint, CheckCircle2 } from 'lucide-react';
+import studiosData from '../data/warrantyStudios.json';
 
 const DealerLogin = () => {
   const [email, setEmail] = useState('');
@@ -14,17 +16,32 @@ const DealerLogin = () => {
     phone: '',
     userId: ''
   });
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
 
-    // Simulate network delay
     setTimeout(() => {
+      const cleanInput = email.trim().toLowerCase();
+      const validUser = studiosData.find(
+        (u) =>
+          (u.username.toLowerCase() === cleanInput ||
+           (u.email && u.email.toLowerCase() === cleanInput) ||
+           cleanInput === 'sparkpro@dealer.com' && u.username === 'sparkpro') &&
+          u.password === password.trim()
+      );
+
+      if (validUser) {
+        localStorage.setItem('dealerUser', JSON.stringify(validUser));
+        localStorage.setItem('studiosUser', validUser.studioName || validUser.username);
+        navigate('/studios-dashboard');
+      } else {
+        setError("Invalid credentials. Please enter correct credentials or contact our support team.");
+      }
       setLoading(false);
-      setError("Invalid credentials. Please re-enter correct credentials or contact our support team if the issue persists.");
-    }, 1500);
+    }, 1000);
   };
 
   const handleSupportSubmit = (e) => {
@@ -53,15 +70,15 @@ const DealerLogin = () => {
         <div className="bg-secondary/30 border border-white/10 rounded-[32px] p-8 md:p-10 backdrop-blur-xl">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label className="block text-[10px] font-black uppercase tracking-widest text-gray-500 mb-3 ml-1">Email Address</label>
+              <label className="block text-[10px] font-black uppercase tracking-widest text-gray-500 mb-3 ml-1">Username or Email</label>
               <div className="relative">
                 <User className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-600" size={18} />
                 <input 
                   required
-                  type="email" 
+                  type="text" 
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="name@dealer.com"
+                  placeholder="sparkpro or name@dealer.com"
                   className="w-full bg-white/5 border border-white/10 rounded-xl py-4 pl-12 pr-4 outline-none focus:border-accent transition-colors text-sm font-medium"
                 />
               </div>

@@ -29,7 +29,7 @@ const solutionsData = {
       }
     ],
     stats: [
-      { label: "Durability", value: "10 Years" },
+      { label: "Durability", value: "8 Years" },
       { label: "Thickness", value: "8 Mils" },
       { label: "Clarity", value: "99.9%" }
     ],
@@ -62,7 +62,7 @@ const solutionsData = {
     stats: [
       { label: "UV Rejection", value: "99%" },
       { label: "Salt Resistance", value: "Extreme" },
-      { label: "Warranty", value: "7 Years" }
+      { label: "Warranty", value: "8 Years" }
     ],
     cta: "Guard Your Vessel"
   },

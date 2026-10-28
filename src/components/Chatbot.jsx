@@ -22,7 +22,7 @@ const CHAT_DATA = {
     ]
   },
   master: {
-    text: "🛡️ **Master – 9.5 mil | 10 Years**\nBuilt for extreme conditions.\n\n✔ Thickest Shield\n✔ Max Puncture Resistance\n✔ Extreme Weather Proof\n✔ Mirror-Like Clarity\n✔ Instant Self-Healing",
+    text: "🛡️ **Master – 9.5 mil | 8 Years**\nBuilt for extreme conditions.\n\n✔ Thickest Shield\n✔ Max Puncture Resistance\n✔ Extreme Weather Proof\n✔ Mirror-Like Clarity\n✔ Instant Self-Healing",
     options: [
       { label: "Compare All", next: "compare" },
       { label: "See Other Options", next: "compare" },
@@ -30,7 +30,7 @@ const CHAT_DATA = {
     ]
   },
   elite: {
-    text: "💎 **Elite – 8.5 mil | 7 Years**\nPerfect balance of performance & finish.\n\n✔ Instant Self-Healing\n✔ Ceramic Infused Layer\n✔ Extreme Impact Resistance\n✔ Stain Resistance",
+    text: "💎 **Elite – 8.5 mil | 8 Years**\nPerfect balance of performance & finish.\n\n✔ Instant Self-Healing\n✔ Ceramic Infused Layer\n✔ Extreme Impact Resistance\n✔ Stain Resistance",
     options: [
       { label: "Compare All", next: "compare" },
       { label: "See Other Options", next: "compare" },
@@ -38,7 +38,7 @@ const CHAT_DATA = {
     ]
   },
   plus: {
-    text: "⚙️ **Plus – 7.5 mil | 4 Years**\nProfessional standard film.\n\n✔ Advanced Self-Healing\n✔ Ultra-Clear Gloss\n✔ Anti-Yellowing Tech\n✔ Enhanced Durability",
+    text: "⚙️ **Plus – 7.5 mil | 8 Years**\nProfessional standard film.\n\n✔ Advanced Self-Healing\n✔ Ultra-Clear Gloss\n✔ Anti-Yellowing Tech\n✔ Enhanced Durability",
     options: [
       { label: "Compare All", next: "compare" },
       { label: "See Other Options", next: "compare" },
@@ -46,7 +46,7 @@ const CHAT_DATA = {
     ]
   },
   nova: {
-    text: "🚗 **Nova – 6.5 mil | 3 Years**\nIdeal for daily driving.\n\n✔ Standard Self-Healing\n✔ High Gloss Finish\n✔ UV Protection",
+    text: "🚗 **Nova – 6.5 mil | 8 Years**\nIdeal for daily driving.\n\n✔ Standard Self-Healing\n✔ High Gloss Finish\n✔ UV Protection",
     options: [
       { label: "Compare All", next: "compare" },
       { label: "See Other Options", next: "compare" },
@@ -95,7 +95,7 @@ const CHAT_DATA = {
     ]
   },
   best_protection: {
-    text: "🏆 Want the highest level of protection?\n\n👉 **Master – 9.5 mil | 10 Years**\n\n✔ Thickest film\n✔ Extreme durability\n✔ Weather & puncture resistant",
+    text: "🏆 Want the highest level of protection?\n\n👉 **Master – 9.5 mil | 8 Years**\n\n✔ Thickest film\n✔ Extreme durability\n✔ Weather & puncture resistant",
     options: [
       { label: "View Details", next: "master" },
       { label: "Compare All", next: "compare" },
@@ -108,7 +108,7 @@ const formatText = (text) => {
   return text.split('\n').map((line, i) => {
     // Bold formatting "**text**" -> <strong>text</strong>
     const parts = line.split(/(\*\*.*?\*\*)/g);
-    
+
     return (
       <span key={i} className="block">
         {parts.map((part, j) => {
@@ -244,18 +244,17 @@ const Chatbot = () => {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.3 }}
-                    className={`max-w-[85%] rounded-2xl p-3 text-sm ${
-                      msg.sender === 'user' 
-                        ? 'bg-accent text-black rounded-br-sm' 
-                        : 'bg-white/10 text-zinc-300 rounded-bl-sm border border-white/5 shadow-inner'
-                    }`}
+                    className={`max-w-[85%] rounded-2xl p-3 text-sm ${msg.sender === 'user'
+                      ? 'bg-accent text-black rounded-br-sm'
+                      : 'bg-white/10 text-zinc-300 rounded-bl-sm border border-white/5 shadow-inner'
+                      }`}
                   >
                     {msg.sender === 'bot' ? formatText(msg.text) : msg.text}
                   </motion.div>
-                  
+
                   {/* Options (only show for the latest bot message if options exist) */}
                   {msg.options && msg.options.length > 0 && idx === messages.length - 1 && (
-                    <motion.div 
+                    <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 0.3 }}
@@ -278,24 +277,24 @@ const Chatbot = () => {
 
               {/* Typing Indicator */}
               {isTyping && (
-                <motion.div 
+                <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   className="flex items-start"
                 >
                   <div className="bg-white/10 border border-white/5 rounded-2xl rounded-bl-sm p-3.5 flex items-center gap-1.5 w-fit">
-                    <motion.div 
-                      animate={{ y: [0, -5, 0] }} 
+                    <motion.div
+                      animate={{ y: [0, -5, 0] }}
                       transition={{ repeat: Infinity, duration: 0.6, delay: 0 }}
                       className="w-1.5 h-1.5 bg-zinc-400 rounded-full"
                     />
-                    <motion.div 
-                      animate={{ y: [0, -5, 0] }} 
+                    <motion.div
+                      animate={{ y: [0, -5, 0] }}
                       transition={{ repeat: Infinity, duration: 0.6, delay: 0.2 }}
                       className="w-1.5 h-1.5 bg-zinc-400 rounded-full"
                     />
-                    <motion.div 
-                      animate={{ y: [0, -5, 0] }} 
+                    <motion.div
+                      animate={{ y: [0, -5, 0] }}
                       transition={{ repeat: Infinity, duration: 0.6, delay: 0.4 }}
                       className="w-1.5 h-1.5 bg-zinc-400 rounded-full"
                     />
@@ -305,7 +304,7 @@ const Chatbot = () => {
 
               <div ref={messagesEndRef} />
             </div>
-            
+
             {/* Footer / Input area replacement */}
             <div className="px-4 py-3 border-t border-white/10 bg-[#161616] flex items-center justify-center">
               <p className="text-[11px] text-zinc-500 tracking-wider">SELECT AN OPTION ABOVE TO CHAT</p>

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Lock, User, AlertCircle, ShieldCheck, ChevronRight } from 'lucide-react';
 import { supabase } from '../supabase';
+import studiosData from '../data/warrantyStudios.json';
 
 const StudiosLogin = () => {
   const [username, setUsername] = useState('');
@@ -17,25 +18,48 @@ const StudiosLogin = () => {
     setError(null);
 
     try {
+      // 1. Check local studios data first for guaranteed reliable authentication
+      const localUser = studiosData.find(
+        (user) =>
+          (user.username.toLowerCase() === username.trim().toLowerCase() ||
+           user.studioName.toLowerCase() === username.trim().toLowerCase()) &&
+          user.password === password.trim()
+      );
+
+      if (localUser) {
+        localStorage.setItem('studiosUser', localUser.studioName || localUser.username);
+        navigate('/studios-dashboard');
+        return;
+      }
+
+      // 2. Fallback to Supabase database
       const { data, error: dbError } = await supabase
         .from('users')
         .select('*')
-        .eq('username', username)
-        .eq('password', password)
+        .eq('username', username.trim())
+        .eq('password', password.trim())
         .maybeSingle();
 
-      if (dbError) {
-        console.error('Supabase DB error:', dbError);
-        setError(`Database Error: ${dbError.message} (${dbError.details || 'Check console'})`);
-      } else if (data) {
-        localStorage.setItem('studiosUser', username);
+      if (data) {
+        localStorage.setItem('studiosUser', username.trim());
         navigate('/studios-dashboard');
       } else {
-        setError('Wrong credentials');
+        setError('Invalid username or password. Please try again.');
       }
     } catch (err) {
-      console.error('Unexpected login exception:', err);
-      setError(`Unexpected error: ${err.message || err}`);
+      console.error('Login exception:', err);
+      // Double check local user in case network/database is offline
+      const localUser = studiosData.find(
+        (user) =>
+          user.username.toLowerCase() === username.trim().toLowerCase() &&
+          user.password === password.trim()
+      );
+      if (localUser) {
+        localStorage.setItem('studiosUser', localUser.studioName || localUser.username);
+        navigate('/studios-dashboard');
+      } else {
+        setError('Invalid credentials.');
+      }
     } finally {
       setLoading(false);
     }

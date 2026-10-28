@@ -9,7 +9,7 @@ const specData = [
   { feature: "Self-Healing", nova: "Heat Activated", plus: "Heat Activated", elite: "Instant/Room Temp", master: "Instant/Room Temp" },
   { feature: "Hydrophobicity", nova: "High", plus: "High", elite: "Extreme", master: "Extreme" },
   { feature: "UV Protection", nova: "Standard", plus: "Advanced", elite: "Maximized", master: "Maximized" },
-  { feature: "Warranty", nova: "3 Years", plus: "4 Years", elite: "7 Years", master: "10 Years" },
+  { feature: "Warranty", nova: "8 Years", plus: "8 Years", elite: "8 Years", master: "8 Years" },
 ];
 
 const FilmVariantsPage = () => {
@@ -52,11 +52,10 @@ const FilmVariantsPage = () => {
                 <button
                   key={v.slug}
                   onClick={() => setActiveTab(v.slug)}
-                  className={`px-8 py-3 rounded-xl font-black uppercase tracking-widest text-[10px] transition-all duration-300 border ${
-                    activeTab === v.slug
-                      ? 'bg-accent text-black border-accent shadow-[0_0_20px_rgba(0,174,239,0.5)]'
-                      : 'bg-white/5 text-white border-white/10 hover:bg-white/10'
-                  }`}
+                  className={`px-8 py-3 rounded-xl font-black uppercase tracking-widest text-[10px] transition-all duration-300 border ${activeTab === v.slug
+                    ? 'bg-accent text-black border-accent shadow-[0_0_20px_rgba(0,174,239,0.5)]'
+                    : 'bg-white/5 text-white border-white/10 hover:bg-white/10'
+                    }`}
                 >
                   {v.name}
                 </button>
@@ -73,24 +72,24 @@ const FilmVariantsPage = () => {
                 className="space-y-6"
               >
                 <div className="flex items-center gap-4 text-accent">
-                    <span className="text-4xl font-black italic">{activeVariant.thickness}</span>
-                    <div className="h-px flex-1 bg-white/10" />
-                    <span className="text-xs font-black uppercase tracking-[0.3em] text-gray-500">{activeVariant.warranty} Warranty</span>
+                  <span className="text-4xl font-black italic">{activeVariant.thickness}</span>
+                  <div className="h-px flex-1 bg-white/10" />
+                  <span className="text-xs font-black uppercase tracking-[0.3em] text-gray-500">{activeVariant.warranty} Warranty</span>
                 </div>
                 <p className="text-gray-400 leading-relaxed text-lg font-medium">
                   {activeVariant.desc}
                 </p>
                 <div className="flex flex-wrap gap-3">
-                    {activeVariant.features.map((f, i) => (
-                        <span key={i} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[9px] font-black uppercase tracking-widest text-gray-400">{f}</span>
-                    ))}
+                  {activeVariant.features.map((f, i) => (
+                    <span key={i} className="px-3 py-1 bg-white/5 border border-white/10 rounded-full text-[9px] font-black uppercase tracking-widest text-gray-400">{f}</span>
+                  ))}
                 </div>
               </motion.div>
             </AnimatePresence>
           </div>
 
           <div className="w-full md:w-1/2 relative h-[400px] rounded-[40px] overflow-hidden border border-white/10 bg-secondary/30 flex items-center justify-center group">
-             <AnimatePresence mode="wait">
+            <AnimatePresence mode="wait">
               <motion.div
                 key={activeTab}
                 initial={{ opacity: 0, scale: 0.9, rotate: -5 }}
@@ -99,14 +98,14 @@ const FilmVariantsPage = () => {
                 transition={{ duration: 0.5 }}
                 className="absolute inset-0 flex items-center justify-center p-12"
               >
-                 <div 
-                    className="absolute inset-0 blur-[100px] opacity-20 transition-all duration-1000"
-                    style={{ backgroundColor: activeVariant.color }}
-                 />
-                 <div className="relative z-10 w-full h-full border-2 border-white/10 rounded-3xl flex flex-col items-center justify-center bg-black/40 backdrop-blur-xl group-hover:border-accent/30 transition-colors">
-                    <Layers size={80} className="text-accent mb-6" />
-                    <span className="text-5xl font-black uppercase tracking-widest text-white italic">{activeVariant.name}</span>
-                 </div>
+                <div
+                  className="absolute inset-0 blur-[100px] opacity-20 transition-all duration-1000"
+                  style={{ backgroundColor: activeVariant.color }}
+                />
+                <div className="relative z-10 w-full h-full border-2 border-white/10 rounded-3xl flex flex-col items-center justify-center bg-black/40 backdrop-blur-xl group-hover:border-accent/30 transition-colors">
+                  <Layers size={80} className="text-accent mb-6" />
+                  <span className="text-5xl font-black uppercase tracking-widest text-white italic">{activeVariant.name}</span>
+                </div>
               </motion.div>
             </AnimatePresence>
           </div>
@@ -129,7 +128,7 @@ const FilmVariantsPage = () => {
             </thead>
             <tbody>
               {specData.map((row, idx) => (
-                <motion.tr 
+                <motion.tr
                   key={idx}
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}

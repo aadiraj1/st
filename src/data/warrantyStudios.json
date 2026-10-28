@@ -24,5 +24,21 @@
     "address": "13th Bangalore Town, Main Shahrah-e-Faisal, Karachi",
     "contact": "111-46632-1",
     "email": "sales@honda-sf.com.pk"
+  },
+  {
+    "username": "sparkpro",
+    "password": "password123",
+    "studioName": "Sparkpro Detailing",
+    "address": "Authorized Starkx Studio",
+    "contact": "0300-1234567",
+    "email": "info@sparkprodetailing.com"
+  },
+  {
+    "username": "sparkpro_detailing",
+    "password": "password123",
+    "studioName": "Sparkpro Detailing",
+    "address": "Authorized Starkx Studio",
+    "contact": "0300-1234567",
+    "email": "info@sparkprodetailing.com"
   }
 ]

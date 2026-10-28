@@ -33,6 +33,7 @@ const Navbar = () => {
     { name: 'Shop', href: '/shop' },
     { name: 'Find Installer', href: '/#dealer-map' },
     { name: 'Articles', href: '/blog' },
+    { name: 'User Warranty Check', href: '/user-warranty-check' },
     { name: 'Warranty Check', href: '/warranty-studio-login' },
   ];
 
@@ -67,7 +68,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center gap-8 lg:gap-10">
+          <div className="hidden md:flex items-center gap-4 lg:gap-7 xl:gap-8">
             {navLinks.map((link, i) => (
               <Link
                 key={link.name}
