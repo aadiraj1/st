@@ -40,5 +40,23 @@
     "address": "Authorized Starkx Studio",
     "contact": "0300-1234567",
     "email": "info@sparkprodetailing.com"
+  },
+
+
+  
+  {
+    "username": "autopub_johar",
+    "password": "1auto3319840",
+    "studioName": "Autopub Detailing – Johar Branch",
+    "address": "B-167, Block 11, Gulistan-e-Johar, Karachi",
+    "contact": "0333-3319840"
+  },
+  {
+    "username": "autopub_saditown",
+    "password": "4auto12922",
+    "studioName": "Autopub Detailing – Sadi Town Branch",
+    "address": "B-5, Central Information, Sadi Town Road, Karachi",
+    "contact": "0302-2222921"
   }
+
 ]

@@ -49,6 +49,27 @@ const locations = [
     contact: "111-46632-1",
     email: "sales@honda-sf.com.pk"
   },
+
+  
+  {
+    top: "52%",
+    left: "66.5%",
+    name: "Autopub Detailing – Johar Branch",
+    location: "Gulistan-e-Johar, Karachi",
+    country: "Pakistan",
+    address: "B-167, Block 11, Gulistan-e-Johar, Karachi",
+    contact: "0333-3319840"
+  },
+  {
+    top: "53%",
+    left: "67%",
+    name: "Autopub Detailing – Sadi Town Branch",
+    location: "Sadi Town, Karachi",
+    country: "Pakistan",
+    address: "B-5, Central Information, Sadi Town Road, Karachi",
+    contact: "0302-2222921"
+  },
+
 ];
 
 const GlobalMap = () => {
