@@ -51,8 +51,8 @@ const FilmVariants = () => {
               />
 
               <div>
-                {/* Thickness Badge - Hidden for Colour PPF as per request */}
-                {item.slug !== 'colour-ppf' && (
+                {/* Thickness Badge - Hidden for Colour PPF and Clear Matt */}
+                {item.slug !== 'colour-ppf' && item.slug !== 'clear-matt' && item.thickness && (
                   <div className="inline-block px-3 py-1.5 bg-accent/10 border border-accent/20 text-accent font-black text-base md:text-xl italic mb-5 md:mb-8">
                     {item.thickness}
                   </div>

@@ -88,9 +88,11 @@ const RollInquiry = () => {
                     />
                     <div className="relative z-10">
                         <div className="flex justify-between items-start mb-12">
-                            <div className="px-4 py-2 bg-accent/10 border border-accent/20 text-accent font-black text-xl italic rounded-lg">
-                                {variant.thickness}
-                            </div>
+                            {variant.thickness ? (
+                                <div className="px-4 py-2 bg-accent/10 border border-accent/20 text-accent font-black text-xl italic rounded-lg">
+                                    {variant.thickness}
+                                </div>
+                            ) : <div />}
                             <ShieldCheck size={32} className="text-accent/40" />
                         </div>
                         <h2 className="text-4xl font-black uppercase tracking-tight mb-4">{variant.name} Series</h2>

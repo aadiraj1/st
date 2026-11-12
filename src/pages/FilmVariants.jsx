@@ -5,7 +5,7 @@ import FilmVariantsComponent from '../components/FilmVariants';
 import { filmVariants } from '../data/filmVariants';
 
 const specData = [
-  { feature: "Thickness", nova: "6.5 mil", plus: "7.5 mil", clearMatt: "7.5 mil", elite: "8.5 mil", master: "9.5 mil" },
+  { feature: "Thickness", nova: "6.5 mil", plus: "7.5 mil", clearMatt: "—", elite: "8.5 mil", master: "9.5 mil" },
   { feature: "Self-Healing", nova: "Heat Activated", plus: "Heat Activated", clearMatt: "Heat Activated", elite: "Instant/Room Temp", master: "Instant/Room Temp" },
   { feature: "Hydrophobicity", nova: "High", plus: "High", clearMatt: "High", elite: "Extreme", master: "Extreme" },
   { feature: "UV Protection", nova: "Standard", plus: "Advanced", clearMatt: "Advanced", elite: "Maximized", master: "Maximized" },
@@ -72,8 +72,12 @@ const FilmVariantsPage = () => {
                 className="space-y-6"
               >
                 <div className="flex items-center gap-4 text-accent">
-                  <span className="text-4xl font-black italic">{activeVariant.thickness}</span>
-                  <div className="h-px flex-1 bg-white/10" />
+                  {activeVariant.thickness && (
+                    <>
+                      <span className="text-4xl font-black italic">{activeVariant.thickness}</span>
+                      <div className="h-px flex-1 bg-white/10" />
+                    </>
+                  )}
                   <span className="text-xs font-black uppercase tracking-[0.3em] text-gray-500">{activeVariant.warranty} Warranty</span>
                 </div>
                 <p className="text-gray-400 leading-relaxed text-lg font-medium">

@@ -54,7 +54,7 @@ const FilmVariantDetail = () => {
               <ArrowLeft size={14} /> Back to variants
             </Link>
             <h1 className="text-7xl md:text-9xl font-black uppercase tracking-tighter italic mb-6">
-              {variant.name} <span className="text-accent underline decoration-4 underline-offset-[12px]">{variant.thickness}</span>
+              {variant.name} {variant.thickness && <span className="text-accent underline decoration-4 underline-offset-[12px]">{variant.thickness}</span>}
             </h1>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto font-medium leading-relaxed">
               {variant.desc}
@@ -143,25 +143,27 @@ const FilmVariantDetail = () => {
       </section>
 
       {/* Interactive Visualizer Mockup */}
-      <section className="py-32 border-t border-white/5">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl font-black uppercase tracking-[0.2em] mb-16">Visualizing <span className="text-accent">{variant.thickness}</span></h2>
-          <div className="max-w-4xl mx-auto h-4 bg-white/5 rounded-full relative overflow-hidden">
-            <motion.div
-              initial={{ width: 0 }}
-              whileInView={{ width: `${(parseFloat(variant.thickness) / 9.5) * 100}%` }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.5, ease: "circOut" }}
-              className="absolute inset-y-0 left-0 bg-accent shadow-[0_0_20px_rgba(0,174,239,0.8)]"
-            />
+      {variant.thickness && (
+        <section className="py-32 border-t border-white/5">
+          <div className="container mx-auto px-6 text-center">
+            <h2 className="text-3xl font-black uppercase tracking-[0.2em] mb-16">Visualizing <span className="text-accent">{variant.thickness}</span></h2>
+            <div className="max-w-4xl mx-auto h-4 bg-white/5 rounded-full relative overflow-hidden">
+              <motion.div
+                initial={{ width: 0 }}
+                whileInView={{ width: `${(parseFloat(variant.thickness) / 9.5) * 100}%` }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.5, ease: "circOut" }}
+                className="absolute inset-y-0 left-0 bg-accent shadow-[0_0_20px_rgba(0,174,239,0.8)]"
+              />
+            </div>
+            <div className="flex justify-between mt-6 text-[10px] font-black text-gray-500 uppercase tracking-widest">
+              <span>0 MIL</span>
+              <span>PROTECTION DEPTH</span>
+              <span>9.5 MIL</span>
+            </div>
           </div>
-          <div className="flex justify-between mt-6 text-[10px] font-black text-gray-500 uppercase tracking-widest">
-            <span>0 MIL</span>
-            <span>PROTECTION DEPTH</span>
-            <span>9.5 MIL</span>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* CTA Section */}
       <section className="py-18 pb-32" >

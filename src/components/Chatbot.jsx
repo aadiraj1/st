@@ -12,7 +12,7 @@ const CHAT_DATA = {
     ]
   },
   compare: {
-    text: "Here’s a quick overview:\n\n**Nova** – 6.5 mil | 3 yrs\nBasic daily protection\n\n**Plus** – 7.5 mil | 4 yrs\nBetter durability & clarity\n\n**Clear Matt** – 7.5 mil | 5 yrs\nSleek satin matte finish\n\n**Elite** – 8.5 mil | 7 yrs\nPremium balance of strength\n\n**Master** – 9.5 mil | 10 yrs\nMaximum protection",
+    text: "Here’s a quick overview:\n\n**Nova** – 6.5 mil | 3 yrs\nBasic daily protection\n\n**Plus** – 7.5 mil | 4 yrs\nBetter durability & clarity\n\n**Clear Matt** – 5 yrs\nSleek satin matte finish\n\n**Elite** – 8.5 mil | 7 yrs\nPremium balance of strength\n\n**Master** – 9.5 mil | 10 yrs\nMaximum protection",
     options: [
       { label: "View Nova", next: "nova" },
       { label: "View Plus", next: "plus" },
@@ -39,7 +39,7 @@ const CHAT_DATA = {
     ]
   },
   clear_matt: {
-    text: "✨ **Clear Matt – 7.5 mil | 5 Years**\nSleek satin matte transformation.\n\n✔ Satin Matte Finish\n✔ Instant Self-Healing\n✔ Stain & Chemical Resistance\n✔ UV & Anti-Yellowing Defense",
+    text: "✨ **Clear Matt | 5 Years**\nSleek satin matte transformation.\n\n✔ Satin Matte Finish\n✔ Instant Self-Healing\n✔ Stain & Chemical Resistance\n✔ UV & Anti-Yellowing Defense",
     options: [
       { label: "Compare All", next: "compare" },
       { label: "See Other Options", next: "compare" },
