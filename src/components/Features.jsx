@@ -16,7 +16,7 @@ const features = [
   {
     icon: <ShieldCheck className="text-accent" />,
     title: "Warranty Backed",
-    desc: "Our premium films come with a 10-year manufacturer warranty against yellowing, cracking, or peeling."
+    desc: "Our premium films come with up to a 10-year manufacturer warranty against yellowing, cracking, or peeling."
   },
   {
     icon: <Heart className="text-accent" />,

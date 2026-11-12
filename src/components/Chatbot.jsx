@@ -12,17 +12,18 @@ const CHAT_DATA = {
     ]
   },
   compare: {
-    text: "Here’s a quick overview:\n\n**Nova** – 6.5 mil | 8 yrs\nBasic daily protection\n\n**Plus** – 7.5 mil | 8 yrs\nBetter durability & clarity\n\n**Elite** – 8.5 mil | 8 yrs\nPremium balance of strength\n\n**Master** – 9.5 mil | 8 yrs\nMaximum protection",
+    text: "Here’s a quick overview:\n\n**Nova** – 6.5 mil | 3 yrs\nBasic daily protection\n\n**Plus** – 7.5 mil | 4 yrs\nBetter durability & clarity\n\n**Clear Matt** – 7.5 mil | 5 yrs\nSleek satin matte finish\n\n**Elite** – 8.5 mil | 7 yrs\nPremium balance of strength\n\n**Master** – 9.5 mil | 10 yrs\nMaximum protection",
     options: [
       { label: "View Nova", next: "nova" },
       { label: "View Plus", next: "plus" },
+      { label: "View Clear Matt", next: "clear_matt" },
       { label: "View Elite", next: "elite" },
       { label: "View Master", next: "master" },
       { label: "🏠 Main Menu", next: "menu" }
     ]
   },
   master: {
-    text: "🛡️ **Master – 9.5 mil | 8 Years**\nBuilt for extreme conditions.\n\n✔ Thickest Shield\n✔ Max Puncture Resistance\n✔ Extreme Weather Proof\n✔ Mirror-Like Clarity\n✔ Instant Self-Healing",
+    text: "🛡️ **Master – 9.5 mil | 10 Years**\nBuilt for extreme conditions.\n\n✔ Thickest Shield\n✔ Max Puncture Resistance\n✔ Extreme Weather Proof\n✔ Mirror-Like Clarity\n✔ Instant Self-Healing",
     options: [
       { label: "Compare All", next: "compare" },
       { label: "See Other Options", next: "compare" },
@@ -30,7 +31,15 @@ const CHAT_DATA = {
     ]
   },
   elite: {
-    text: "💎 **Elite – 8.5 mil | 8 Years**\nPerfect balance of performance & finish.\n\n✔ Instant Self-Healing\n✔ Ceramic Infused Layer\n✔ Extreme Impact Resistance\n✔ Stain Resistance",
+    text: "💎 **Elite – 8.5 mil | 7 Years**\nPerfect balance of performance & finish.\n\n✔ Instant Self-Healing\n✔ Ceramic Infused Layer\n✔ Extreme Impact Resistance\n✔ Stain Resistance",
+    options: [
+      { label: "Compare All", next: "compare" },
+      { label: "See Other Options", next: "compare" },
+      { label: "🏠 Main Menu", next: "menu" },
+    ]
+  },
+  clear_matt: {
+    text: "✨ **Clear Matt – 7.5 mil | 5 Years**\nSleek satin matte transformation.\n\n✔ Satin Matte Finish\n✔ Instant Self-Healing\n✔ Stain & Chemical Resistance\n✔ UV & Anti-Yellowing Defense",
     options: [
       { label: "Compare All", next: "compare" },
       { label: "See Other Options", next: "compare" },
@@ -38,7 +47,7 @@ const CHAT_DATA = {
     ]
   },
   plus: {
-    text: "⚙️ **Plus – 7.5 mil | 8 Years**\nProfessional standard film.\n\n✔ Advanced Self-Healing\n✔ Ultra-Clear Gloss\n✔ Anti-Yellowing Tech\n✔ Enhanced Durability",
+    text: "⚙️ **Plus – 7.5 mil | 4 Years**\nProfessional standard film.\n\n✔ Advanced Self-Healing\n✔ Ultra-Clear Gloss\n✔ Anti-Yellowing Tech\n✔ Enhanced Durability",
     options: [
       { label: "Compare All", next: "compare" },
       { label: "See Other Options", next: "compare" },
@@ -46,7 +55,7 @@ const CHAT_DATA = {
     ]
   },
   nova: {
-    text: "🚗 **Nova – 6.5 mil | 8 Years**\nIdeal for daily driving.\n\n✔ Standard Self-Healing\n✔ High Gloss Finish\n✔ UV Protection",
+    text: "🚗 **Nova – 6.5 mil | 3 Years**\nIdeal for daily driving.\n\n✔ Standard Self-Healing\n✔ High Gloss Finish\n✔ UV Protection",
     options: [
       { label: "Compare All", next: "compare" },
       { label: "See Other Options", next: "compare" },
@@ -58,28 +67,38 @@ const CHAT_DATA = {
     options: [
       { label: "Daily Driving", next: "rec_daily" },
       { label: "Luxury Finish", next: "rec_luxury" },
+      { label: "Matte Finish", next: "rec_matte" },
       { label: "Off-road Protection", next: "rec_offroad" },
       { label: "Budget Option", next: "rec_budget" },
     ]
   },
   rec_daily: {
-    text: "👍 Go with **Nova** or **Plus**\nBalanced protection for everyday use.",
+    text: "👍 Go with **Nova (3 Years)** or **Plus (4 Years)**\nBalanced protection for everyday use.",
     options: [
+      { label: "View Nova", next: "nova" },
       { label: "View Plus", next: "plus" },
       { label: "Compare All", next: "compare" },
       { label: "Back", next: "recommend" },
     ]
   },
   rec_luxury: {
-    text: "💎 Choose **Elite**\nHigh clarity with ceramic layer.",
+    text: "💎 Choose **Elite (7 Years)**\nHigh clarity with ceramic layer.",
     options: [
       { label: "View Details", next: "elite" },
       { label: "Compare All", next: "compare" },
       { label: "Back", next: "recommend" },
     ]
   },
+  rec_matte: {
+    text: "✨ Choose **Clear Matt (5 Years)**\nStunning satin matte finish with 5 years warranty.",
+    options: [
+      { label: "View Details", next: "clear_matt" },
+      { label: "Compare All", next: "compare" },
+      { label: "Back", next: "recommend" },
+    ]
+  },
   rec_offroad: {
-    text: "🛡️ Best is **Master**\nMaximum thickness & durability.",
+    text: "🛡️ Best is **Master (10 Years)**\nMaximum thickness & durability.",
     options: [
       { label: "View Details", next: "master" },
       { label: "Compare All", next: "compare" },
@@ -87,7 +106,7 @@ const CHAT_DATA = {
     ]
   },
   rec_budget: {
-    text: "💰 **Nova** is the best value option.",
+    text: "💰 **Nova (3 Years)** is the best value option.",
     options: [
       { label: "View Details", next: "nova" },
       { label: "Compare All", next: "compare" },
@@ -95,7 +114,7 @@ const CHAT_DATA = {
     ]
   },
   best_protection: {
-    text: "🏆 Want the highest level of protection?\n\n👉 **Master – 9.5 mil | 8 Years**\n\n✔ Thickest film\n✔ Extreme durability\n✔ Weather & puncture resistant",
+    text: "🏆 Want the highest level of protection?\n\n👉 **Master – 9.5 mil | 10 Years**\n\n✔ Thickest film\n✔ Extreme durability\n✔ Weather & puncture resistant",
     options: [
       { label: "View Details", next: "master" },
       { label: "Compare All", next: "compare" },

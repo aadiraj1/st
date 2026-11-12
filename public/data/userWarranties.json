@@ -5,7 +5,7 @@
     "customerName": "Verified Client",
     "installationDate": "2024-06-15",
     "productVariant": "Elite",
-    "warrantyYears": 8,
+    "warrantyYears": 7,
     "studioName": "Jetour Quaideen",
     "studioLocation": "241-A, P.E.C.H.S. Block-2, Main Shahrah-e-Quaideen, Karachi",
     "contact": "0333-6538687",
@@ -18,11 +18,24 @@
     "customerName": "California Verified Client",
     "installationDate": "2025-01-10",
     "productVariant": "Master",
-    "warrantyYears": 8,
+    "warrantyYears": 10,
     "studioName": "Protective Film Solutions",
     "studioLocation": "Santa Ana, California, USA",
     "contact": "+1 (714) 555-0199",
     "coverageType": "Full Body Protection & Track Pack (PPF)",
+    "status": "active"
+  },
+  {
+    "warrantyNumber": "3000 3000 3000 3055",
+    "carName": "BMW M4 Competition",
+    "customerName": "Dubai Verified Client",
+    "installationDate": "2024-11-20",
+    "productVariant": "Clear Matt",
+    "warrantyYears": 5,
+    "studioName": "Grandeur Detail Studio",
+    "studioLocation": "Al Quoz Industrial Area 3, Dubai, UAE",
+    "contact": "+971 4 333 8899",
+    "coverageType": "Full Body Matte Stealth (PPF)",
     "status": "active"
   }
 ]

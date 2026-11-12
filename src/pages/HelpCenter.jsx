@@ -28,7 +28,7 @@ const faqCategories = [
     title: 'Warranty & Claims',
     icon: <Book size={20} />,
     questions: [
-      { q: "What does the 10-year warranty cover?", a: "Our comprehensive warranty covers yellowing, staining, cracking, blistering, and delamination. It is backed by our global network of certified dealers." },
+      { q: "What do the Starkx warranties cover and how long do they last?", a: "Our comprehensive warranty covers yellowing, staining, cracking, blistering, and delamination. Coverage duration depends on the film variant: Master (10 Years), Elite (7 Years), Clear Matt (5 Years), Plus (4 Years), and Nova (3 Years). All are backed by our global network of certified dealers." },
       { q: "Is the warranty transferable?", a: "Yes, the Starkx.Pro warranty is transferable to subsequent owners, provided the original installation was performed by a certified dealer and the vehicle care requirements have been met." }
     ]
   }

@@ -834,7 +834,41 @@ const UserWarrantyCheck = () => {
                 }}
                 className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/5 hover:bg-accent/20 border border-white/10 hover:border-accent/40 rounded-lg text-accent font-mono transition-colors cursor-pointer"
               >
-                <span>2000 2000 2000 2044</span>
+                <span>Master (10 Yrs)</span>
+                <span className="text-[10px] bg-accent/30 text-white px-1.5 py-0.5 rounded">Active</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setSerial('1000 1000 1000 1033');
+                  setTimeout(() => {
+                    const match = allWarranties.find((w) => normalize(w.warrantyNumber) === '1000100010001033');
+                    if (match) {
+                      setWarrantyData(match);
+                      setNotFound(false);
+                    }
+                  }, 150);
+                }}
+                className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/5 hover:bg-accent/20 border border-white/10 hover:border-accent/40 rounded-lg text-accent font-mono transition-colors cursor-pointer"
+              >
+                <span>Elite (7 Yrs)</span>
+                <span className="text-[10px] bg-accent/30 text-white px-1.5 py-0.5 rounded">Active</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setSerial('3000 3000 3000 3055');
+                  setTimeout(() => {
+                    const match = allWarranties.find((w) => normalize(w.warrantyNumber) === '3000300030003055');
+                    if (match) {
+                      setWarrantyData(match);
+                      setNotFound(false);
+                    }
+                  }, 150);
+                }}
+                className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/5 hover:bg-accent/20 border border-white/10 hover:border-accent/40 rounded-lg text-accent font-mono transition-colors cursor-pointer"
+              >
+                <span>Clear Matt (5 Yrs)</span>
                 <span className="text-[10px] bg-accent/30 text-white px-1.5 py-0.5 rounded">Active</span>
               </button>
             </div>

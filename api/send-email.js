@@ -17,10 +17,12 @@ export default async function handler(req, res) {
   const warrantyYearsMap = {
     'Nova': 3,
     'Plus': 4,
+    'Clear Matt': 5,
+    'Clear Matte': 5,
     'Elite': 7,
     'Master': 10,
   };
-  const warrantyYears = warrantyYearsMap[serviceType] || 3;
+  const warrantyYears = warrantyYearsMap[serviceType] || 5;
 
   // Format dates
   const startDate = new Date(applyDate);

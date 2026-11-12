@@ -19,7 +19,7 @@ const WarrantyCheck = () => {
       const isSerialValid = sequence.includes(serial.trim());
       const lowerType = type.toLowerCase();
       
-      const validTypes = ['master', 'elite', 'plus', 'nova'];
+      const validTypes = ['master', 'elite', 'plus', 'nova', 'clear matt', 'clear matte', 'matt', 'matte'];
       const isTypeValid = validTypes.some(validType => lowerType.includes(validType));
       
       if (isSerialValid && isTypeValid) {
@@ -28,6 +28,7 @@ const WarrantyCheck = () => {
         
         if (lowerType.includes('master')) years = "10";
         else if (lowerType.includes('elite')) years = "7";
+        else if (lowerType.includes('clear matt') || lowerType.includes('clear matte') || lowerType.includes('matt')) years = "5";
         else if (lowerType.includes('plus')) years = "4";
         else if (lowerType.includes('nova')) years = "3";
 
