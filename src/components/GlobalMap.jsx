@@ -69,6 +69,15 @@ const locations = [
     address: "B-5, Central Information, Sadi Town Road, Karachi",
     contact: "0302-2222921"
   },
+  {
+  top: "65%",
+  left: "48%",
+  name: "Chery South Karachi",
+  location: "Korangi Industrial Area, Karachi",
+  country: "Pakistan",
+  address: "Plot # 18, Mehran Town Sector 23, Korangi Industrial Area, Karachi",
+  contact: "(021) 111 124 349"
+},
 
 ];
 

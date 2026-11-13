@@ -166,3 +166,33 @@ img, video {
 .logo-glow-pulse {
   animation: logo-glow 1.5s ease-in-out infinite;
 }
+
+/* Print optimization for Starkx Luxury Warranty Card & Certificate */
+@media print {
+  @page {
+    size: auto;
+    margin: 8mm;
+  }
+
+  html, body {
+    background: #06080c !important;
+    color: #ffffff !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  nav, footer, .custom-cursor, .custom-cursor-dot {
+    display: none !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  #warranty-certificate {
+    margin: 0 auto !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+}
