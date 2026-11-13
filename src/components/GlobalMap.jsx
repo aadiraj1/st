@@ -78,7 +78,15 @@ const locations = [
   address: "Plot # 18, Mehran Town Sector 23, Korangi Industrial Area, Karachi",
   contact: "(021) 111 124 349"
 },
-
+{
+  top: "65%",
+  left: "48%",
+  name: "Diamond Car Care",
+  location: "P.E.C.H.S., Karachi",
+  country: "Pakistan",
+  address: "Plot 168-B, Khalid Bin Walid Rd, Block 3 P.E.C.H.S., Karachi, 75400, Pakistan",
+  contact: "03077030333"
+},
 ];
 
 const GlobalMap = () => {
